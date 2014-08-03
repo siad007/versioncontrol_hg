@@ -80,7 +80,7 @@ abstract class AbstractCommand
     public function run($return = false)
     {
         if ($return) {
-            printf($this->command, $this);
+            return sprintf($this->command, $this);
         } else {
             shell_exec(sprintf($this->command, $this));
         }
