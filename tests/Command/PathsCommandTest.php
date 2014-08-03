@@ -17,10 +17,6 @@ class PathsCommandTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'hg paths test';
 
-        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-            $expected = str_replace("'", '"', $expected);
-        }
-
         $this->assertSame($expected, $pathsCmd->run(true));
     }
 }
