@@ -90,7 +90,14 @@ abstract class AbstractCommand
         if ($return) {
             return sprintf($this->command, $this);
         } else {
-            shell_exec(sprintf($this->command, $this));
+            exec(sprintf($this->command, $this) . " 2>&1", $output, $code);
+
+            if ($code != 0) {
+                throw new \RuntimeException(
+                    'An error occurred while using Mercurial; hg returned: '
+                    . implode(PHP_EOL, $output)
+                );
+            }
         }
     }
 
