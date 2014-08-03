@@ -1,0 +1,23 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"Siad007\\VersionControl\\HG\\" : "src",
+			"Siad007\\VersionControl\\HG\\Tests\\" : "tests"
+		}
+	},
+	"name" : "siad007/versioncontrol_hg",
+	"type" : "library",
+	"require" : {
+		"php" : ">=5.4"
+	},
+	"authors" : [{
+			"name" : "Siad Ardroumli",
+			"email" : "siad.ardroumli@gmail.com",
+			"role" : "Lead"
+		}
+	],
+	"require-dev" : {
+		"phpunit/phpunit" : "~4"
+	},
+	"license" : "MIT"
+}
