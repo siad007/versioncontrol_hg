@@ -90,6 +90,9 @@ abstract class AbstractCommand
         if ($return) {
             return sprintf($this->command, $this);
         } else {
+            $output = array();
+            $code = 0;
+
             exec(sprintf($this->command, $this) . " 2>&1", $output, $code);
 
             if ($code != 0) {
