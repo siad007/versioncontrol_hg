@@ -45,7 +45,7 @@ class CloneCommand extends AbstractCommand
      */
     public function setDestination($destination)
     {
-        $this->arguments['destination'] = $destination;
+        $this->arguments['destination'] = escapeshellarg($destination);
     }
 
     /**
@@ -63,7 +63,7 @@ class CloneCommand extends AbstractCommand
      */
     public function setSource($source)
     {
-        $this->arguments['source'] = $source;
+        $this->arguments['source'] = escapeshellarg($source);
     }
 
 
