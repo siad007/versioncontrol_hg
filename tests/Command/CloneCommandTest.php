@@ -18,9 +18,12 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
         $cloneCmd->setUncompressed(true);
         $cloneCmd->setInsecure(true);
 
-        $this->assertSame(
-            'hg clone --uncompressed --insecure "C:\xampp\source" "C:\xampp\dest"',
-            $cloneCmd->run(true)
-        );
+        $expected = 'hg clone --uncompressed --insecure \'C:\xampp\source\' \'C:\xampp\dest\'';
+
+        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+            $expected = str_replace("'", '"', $expected);
+        }
+
+        $this->assertSame($expected, $cloneCmd->run(true));
     }
 }
