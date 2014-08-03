@@ -9,12 +9,8 @@ use Siad007\VersionControl\HG\Command;
  *
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
- * @method string getSsh()
- * @method void setSsh(string $command)
- * @method string getRemotecmd()
- * @method void setRemotecmd(string $command)
- * @method boolean getInsecure()
- * @method void setInsecure(boolean $flag)
+ * @method string getName()
+ * @method void setName(string $name)
  */
 class PathsCommand extends AbstractCommand
 {
@@ -35,7 +31,7 @@ class PathsCommand extends AbstractCommand
     }
 
     /**
-     * @param string $destination
+     * @param string $name
      *
      * @return void
      */

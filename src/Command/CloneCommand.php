@@ -74,7 +74,6 @@ class CloneCommand extends AbstractCommand
         $this->arguments['source'] = escapeshellarg($source);
     }
 
-
     /**
      * @return string
      *

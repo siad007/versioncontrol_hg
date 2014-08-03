@@ -108,7 +108,7 @@ abstract class AbstractCommand
      * Magic method to get option entries with a getter/setter method.
      *
      * @param string $name
-     * @param array $arguments
+     * @param array  $arguments
      *
      * @return boolean|string
      *
