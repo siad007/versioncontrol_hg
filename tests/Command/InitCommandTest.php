@@ -24,9 +24,6 @@ class InitCommandTest extends \PHPUnit_Framework_TestCase
             $expected = str_replace("'", '"', $expected);
         }
 
-        $this->assertSame(
-            'hg init --verbose --encoding UTF-8 --ssh testSSH --insecure "C:\xampp\"',
-            $initCmd->run(true)
-        );
+        $this->assertSame($expected, $initCmd->run(true));
     }
 }
