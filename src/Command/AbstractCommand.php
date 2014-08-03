@@ -77,16 +77,13 @@ abstract class AbstractCommand
     /**
      * Main run function.
      */
-    public function run()
+    public function run($return = false)
     {
-        printf($this->command, $this);
-        /*
-         * exec(
-         * sprintf($this->command, $this),
-         * $output,
-         * $returnValue
-         * );
-         */
+        if ($return) {
+            printf($this->command, $this);
+        } else {
+            shell_exec(sprintf($this->command, $this));
+        }
     }
 
     /**
