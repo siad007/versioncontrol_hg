@@ -8,3 +8,4 @@ composer.phar
 box.phar
 phpunit.xml
 test.php
+composer.lock
