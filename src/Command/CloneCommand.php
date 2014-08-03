@@ -7,6 +7,12 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
+ * @method boolean getNoupdate()
+ * @method void setNoupdate(boolean $flag)
+ * @method boolean getPull()
+ * @method void setPull(boolean $flag)
+ * @method boolean getUncompressed()
+ * @method void setUncompressed(boolean $flag)
  * @method string getSsh()
  * @method void setSsh(string $command)
  * @method string getRemotecmd()
@@ -24,9 +30,11 @@ class CloneCommand extends AbstractCommand
 
     /** @var mixed $options */
     protected $options = array(
-        '--noupdate'     => '',
-        '--pull'         => '',
+        '--noupdate'     => false,
+        '--pull'         => false,
         '--uncompressed' => false,
+        '--ssh'       => '',
+        '--remotecmd' => '',
         '--insecure'     => false
     );
 
