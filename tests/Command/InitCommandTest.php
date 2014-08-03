@@ -18,7 +18,7 @@ class InitCommandTest extends \PHPUnit_Framework_TestCase
         $initCmd->setVerbose(true);
         $initCmd->setEncoding('UTF-8');
 
-        $expected = 'hg init --verbose --encoding UTF-8 --ssh testSSH --insecure \'C:\xampp\dest\'';
+        $expected = 'hg init --verbose --encoding UTF-8 --ssh testSSH --insecure \'C:\xampp\dest\\\'';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $expected = str_replace("'", '"', $expected);
