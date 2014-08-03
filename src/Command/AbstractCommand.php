@@ -67,11 +67,11 @@ abstract class AbstractCommand
      * - sets the concrete commands name
      * - merges the global options with the concrete commands options
      */
-    public function __construct()
+    public function __construct($options = array())
     {
         $this->name = $this->getCommandName();
 
-        $this->options = array_merge($this->globalOptions, $this->options);
+        $this->options = array_merge($this->globalOptions, $this->options, $options);
     }
 
     /**

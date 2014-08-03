@@ -74,7 +74,7 @@ class CloneCommand extends AbstractCommand
      */
     public function __toString()
     {
-        if ($this->source === '') {
+        if ($this->arguments['source'] === '') {
             throw new \InvalidArgumentException(
                 'You have to set a source directory.'
             );

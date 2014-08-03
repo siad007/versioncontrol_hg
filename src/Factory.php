@@ -30,7 +30,7 @@ class Factory
             ucfirst($command)
         );
 
-        return new $commandClassName;
+        return new $commandClassName($options);
 
         throw new \InvalidArgumentException(
             "Command $commandClassName not supported."
