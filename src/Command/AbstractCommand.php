@@ -38,6 +38,9 @@ abstract class AbstractCommand
     /**  @var string $command */
     protected $command = 'hg %s';
 
+    /** @var array $options */
+    protected $options = array();
+
     /** @var array $globalOptions */
     protected $globalOptions = array(
         '--repository'     => '',
