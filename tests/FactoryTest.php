@@ -9,30 +9,27 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function instantiateCloneCommand()
+    public function instantiateHgCommands()
     {
-        $cloneCommand = Factory::getInstance('clone');
+        $commands = [
+            'clone',
+            'init',
+            'paths',
+            'pull',
+            'push',
+            'root',
+            'summary',
+            'tags',
+            'update',
+            'verify',
+            'version'
+        ];
 
-        $this->assertInstanceOf('Siad007\VersionControl\HG\Command\CloneCommand', $cloneCommand);
-    }
-
-    /**
-     * @test
-     */
-    public function instantiateInitCommand()
-    {
-        $initCommand = Factory::getInstance('init');
-
-        $this->assertInstanceOf('Siad007\VersionControl\HG\Command\InitCommand', $initCommand);
-    }
-
-    /**
-     * @test
-     */
-    public function instantiatePathsCommand()
-    {
-        $pathsCommand = Factory::getInstance('paths');
-
-        $this->assertInstanceOf('Siad007\VersionControl\HG\Command\PathsCommand', $pathsCommand);
+        foreach ($commands as $command) {
+            $this->assertInstanceOf(
+                sprintf('Siad007\VersionControl\HG\Command\%sCommand', $command),
+                Factory::getInstance($command)
+            );
+        }
     }
 }
