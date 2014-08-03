@@ -30,11 +30,13 @@ class Factory
             ucfirst($command)
         );
 
-        return new $commandClassName($options);
+        if (!class_exists($commandClassName)) {
+            throw new \InvalidArgumentException(
+                "Command $commandClassName not supported."
+            );
+        }
 
-        throw new \InvalidArgumentException(
-            "Command $commandClassName not supported."
-        );
+        return new $commandClassName($options);
     }
 
     /**
