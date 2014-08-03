@@ -11,6 +11,7 @@ class InitCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function initCommand()
     {
+        /* @var $initCmd \Siad007\VersionControl\HG\Command\InitCommand */
         $initCmd = Factory::getInstance('init');
         $initCmd->setDestination('C:\\xampp\\dest\\');
         $initCmd->setSsh('testSSH');
