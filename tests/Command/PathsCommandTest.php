@@ -17,6 +17,7 @@ class PathsCommandTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'hg paths test';
 
+        $this->assertSame('test', $pathsCmd->getName());
         $this->assertSame($expected, $pathsCmd->run(true));
     }
 }
