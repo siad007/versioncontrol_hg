@@ -8,7 +8,7 @@ namespace Siad007\VersionControl\HG\Command;
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
  * @method string getRev()
- * @method void setRev(string $rev)
+ * @method void setRev(string $startrev)
  * @method boolean getTopo()
  * @method void setTopo(boolean $flag)
  * @method boolean getClosed()

@@ -45,8 +45,11 @@ class PathsCommand extends AbstractCommand
      */
     public function __toString()
     {
-        $argument = $this->arguments['name'] === '' ?: ' ' . $this->arguments['name'];
-
-        return sprintf("%s%s", $this->name, $argument);
+        return sprintf(
+            "%s%s%s",
+            $this->name,
+            $this->assembleOptionString(),
+            $this->arguments['name']
+        );
     }
 }
