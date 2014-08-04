@@ -26,7 +26,8 @@ class SummaryCommand extends AbstractCommand
     public function __toString()
     {
         return sprintf(
-            "{$this->name}%s",
+            "%s%s",
+            $this->name,
             $this->assembleOptionString()
         );
     }
