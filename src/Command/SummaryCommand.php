@@ -7,12 +7,8 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
- * @method string getSsh()
- * @method void setSsh(string $command)
- * @method string getRemotecmd()
- * @method void setRemotecmd(string $command)
- * @method boolean getInsecure()
- * @method void setInsecure(boolean $flag)
+ * @method boolean getRemote()
+ * @method void setRemote(boolean $flag)
  */
 class SummaryCommand extends AbstractCommand
 {

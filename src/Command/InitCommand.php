@@ -52,7 +52,7 @@ class InitCommand extends AbstractCommand
     public function __toString()
     {
         return sprintf(
-            "%s%s%s",
+            "%s%s %s",
             $this->name,
             $this->assembleOptionString(),
             $this->arguments['destination']

@@ -148,7 +148,7 @@ abstract class AbstractCommand
             }
         }
 
-        return $optionString !== '' ? $optionString . ' ' : ' ';
+        return $optionString !== '' ? $optionString . '' : ' ';
     }
 
     /**

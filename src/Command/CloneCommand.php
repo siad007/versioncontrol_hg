@@ -87,14 +87,14 @@ class CloneCommand extends AbstractCommand
 
         if ($this->arguments['destination'] === '') {
             $result = sprintf(
-                "%s%s%s",
+                "%s%s %s",
                 $this->name,
                 $this->assembleOptionString(),
                 $this->arguments['source']
             );
         } else {
             $result = sprintf(
-                "%s%s%s %s",
+                "%s%s %s %s",
                 $this->name,
                 $this->assembleOptionString(),
                 $this->arguments['source'],
