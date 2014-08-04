@@ -23,6 +23,22 @@ tools:
         enabled: true
         config:
             level: all
+            fixers:
+                indentation: true
+                linefeed: true
+                trailing_spaces: true
+                unused_use: true
+                phpdoc_params: true
+                visibility: true
+                return: true
+                short_tag: false
+                braces: true
+                include: true
+                php_closing_tag: true
+                extra_empty_lines: true
+                controls_spaces: true
+                elseif: true
+                eof_ending: true
         filter:
             paths: ["src/*", "tests/*"]
     php_loc:
