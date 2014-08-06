@@ -40,6 +40,36 @@ class Factory
     }
 
     /**
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\CloneCommand
+     */
+    public static function createClone($options = array())
+    {
+        return self::getInstance('clone', $options);
+    }
+
+    /**
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\HeadsCommand
+     */
+    public static function createHeads($options = array())
+    {
+        return self::getInstance('heads', $options);
+    }
+
+    /**
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\InitCommand
+     */
+    public static function createInit($options = array())
+    {
+        return self::getInstance('init', $options);
+    }
+
+    /**
      * Disabled clone behavior.
      */
     final private function __clone()

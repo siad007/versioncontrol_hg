@@ -11,8 +11,7 @@ class HeadsCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function headsCommand()
     {
-        /* @var $headsCmd \Siad007\VersionControl\HG\Command\HeadsCommand */
-        $headsCmd = Factory::getInstance('heads');
+        $headsCmd = Factory::createHeads();
         $headsCmd->setTemplate('template');
         $headsCmd->setClosed(true);
         $headsCmd->setRev('startrev');

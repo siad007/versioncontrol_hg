@@ -11,8 +11,7 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function cloneCommand()
     {
-        /* @var $cloneCmd \Siad007\VersionControl\HG\Command\CloneCommand */
-        $cloneCmd = Factory::getInstance('clone');
+        $cloneCmd = Factory::createClone();
         $cloneCmd->setSource('C:\\xampp\\source');
         $cloneCmd->setDestination('C:\\xampp\\dest');
         $cloneCmd->setUncompressed(true);
@@ -32,8 +31,7 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function cloneCommandWithoutDestination()
     {
-        /* @var $cloneCmd \Siad007\VersionControl\HG\Command\CloneCommand */
-        $cloneCmd = Factory::getInstance('clone');
+        $cloneCmd = Factory::createClone();
         $cloneCmd->setSource('C:\\xampp\\source');
         $cloneCmd->setUncompressed(true);
         $cloneCmd->setInsecure(true);
