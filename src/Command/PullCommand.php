@@ -17,6 +17,8 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setRemotecmd(string $command)
  * @method boolean getInsecure()
  * @method void setInsecure(boolean $flag)
+ * @method array getRev()
+ * @method void addRev(string $revision)
  */
 class PullCommand extends AbstractCommand
 {
@@ -29,6 +31,7 @@ class PullCommand extends AbstractCommand
     protected $options = array(
         '--update'    => false,
         '--force'     => false,
+        '--rev'       => array(),
         '--ssh'       => '',
         '--remotecmd' => '',
         '--insecure'  => false

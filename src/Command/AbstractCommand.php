@@ -88,7 +88,7 @@ abstract class AbstractCommand
     public function run($return = false)
     {
         if ($return) {
-            return sprintf($this->command, $this);
+            echo sprintf($this->command, $this);
         } else {
             $output = array();
             $code = 0;
@@ -100,6 +100,8 @@ abstract class AbstractCommand
                     'An error occurred while using Mercurial; hg returned: '
                     . implode(PHP_EOL, $output)
                 );
+            } else {
+                echo implode(PHP_EOL, $output);
             }
         }
     }
@@ -116,7 +118,7 @@ abstract class AbstractCommand
      */
     public function __call($name, $arguments)
     {
-        if (preg_match('~^(set|get)([A-Z])(.*)$~', $name, $matches)) {
+        if (preg_match('~^(set|get|add)([A-Z])(.*)$~', $name, $matches)) {
             $property = strtolower($matches[2]) . $matches[3];
 
             if (! isset($this->options["--{$property}"])) {
@@ -127,6 +129,8 @@ abstract class AbstractCommand
                     return $this->options["--{$property}"] = $arguments[0];
                 case 'get':
                     return $this->options["--{$property}"];
+                case 'add':
+                    return $this->options["--{$property}"][] = $arguments[0];
                 case 'default':
                     throw new \InvalidArgumentException('Method ' . $name . ' not exists');
             }
@@ -145,6 +149,8 @@ abstract class AbstractCommand
                 $optionString .= " {$name}";
             } elseif (is_string($option) && $option !== '') {
                 $optionString .= " {$name} {$option}";
+            } elseif (is_array($option) && !empty($option)) {
+                $optionString .= " {$name} " . implode(' ', $option);
             }
         }
 
