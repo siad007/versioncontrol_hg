@@ -88,7 +88,7 @@ abstract class AbstractCommand
     public function run($return = false)
     {
         if ($return) {
-            echo sprintf($this->command, $this);
+            sprintf($this->command, $this);
         } else {
             $output = array();
             $code = 0;
