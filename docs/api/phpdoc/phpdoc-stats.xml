@@ -10,6 +10,14 @@
   </stat>
   <stat date="2014-08-09T22:10:45+02:00">
     <counters>
+      <files>15</files>
+      <deprecated>0</deprecated>
+      <errors>76</errors>
+      <markers>0</markers>
+    </counters>
+  </stat>
+  <stat date="2014-08-09T22:15:26+02:00">
+    <counters>
         <files>15</files>
         <deprecated>0</deprecated>
         <errors>76</errors>
