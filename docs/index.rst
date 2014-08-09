@@ -18,6 +18,8 @@ Contents:
    commands/root
    commands/summary
    commands/update
+   commands/verify
+   commands/version
 
 Commands
 --------
