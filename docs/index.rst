@@ -1,8 +1,3 @@
-.. VersionControl_HG documentation master file, created by
-   sphinx-quickstart on Wed Aug 06 22:11:15 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to VersionControl_HG's documentation!
 =============================================
 
@@ -14,25 +9,35 @@ Contents:
 .. toctree::
    :hidden:
 
-   commands
+   clone
+   heads
+   init
+   paths
+   pull
+   push
+   root
+   summary
+   update
 
 Commands
 --------
 
-   * clone
-   * heads
-   * init
-   * paths
-   * pull
-   * push
-   * root
-   * summary
-   * update
+   * :doc:`clone`
+   * :doc:`heads`
+   * :doc:`init`
+   * :doc:`paths`
+   * :doc:`pull`
+   * :doc:`push`
+   * :doc:`root`
+   * :doc:`summary`
+   * :doc:`update`
+
 
 Indices and tables
 ==================
 
-* :doc:`index`
-* :ref:`genindex`
-* :ref:`search`
+   * :doc:`index`
+   * :ref:`genindex`
+   * :ref:`search`
+
 

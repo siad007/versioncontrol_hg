@@ -19,6 +19,10 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setInsecure(boolean $flag)
  * @method array getRev()
  * @method void addRev(string $revision)
+ * @method array getBookmark()
+ * @method void addBookmark(string $bookmark)
+ * @method array getBranch()
+ * @method void addBranch(string $branch)
  */
 class PullCommand extends AbstractCommand
 {
@@ -32,6 +36,8 @@ class PullCommand extends AbstractCommand
         '--update'    => false,
         '--force'     => false,
         '--rev'       => array(),
+        '--bookmark'  => array(),
+        '--branch'    => array(),
         '--ssh'       => '',
         '--remotecmd' => '',
         '--insecure'  => false

@@ -14,13 +14,17 @@ class PullCommandTest extends \PHPUnit_Framework_TestCase
         /* @var $pullCmd \Siad007\VersionControl\HG\Command\PullCommand */
         $pullCmd = Factory::getInstance('pull');
         $pullCmd->setSource('C:\\xampp\\source\\');
+        $pullCmd->addRev('rev1');
+        $pullCmd->addRev('rev2');
+        $pullCmd->addBookmark('bookmark');
+        $pullCmd->addBranch('branch');
         $pullCmd->setSsh('testSSH');
         $pullCmd->setInsecure(true);
         $pullCmd->setVerbose(true);
         $pullCmd->setEncoding('UTF-8');
 
         $source = '\'C:\xampp\source\\\'';
-        $expected = 'hg pull --verbose --encoding UTF-8 --ssh testSSH --insecure ';
+        $expected = 'hg pull --verbose --encoding UTF-8 --rev rev1 rev2 --bookmark bookmark --branch branch --ssh testSSH --insecure ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $source = str_replace("'", '"', $source);
