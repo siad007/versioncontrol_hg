@@ -9,28 +9,28 @@ Contents:
 .. toctree::
    :hidden:
 
-   clone
-   heads
-   init
-   paths
-   pull
-   push
-   root
-   summary
-   update
+   commands/clone
+   commands/heads
+   commands/init
+   commands/paths
+   commands/pull
+   commands/push
+   commands/root
+   commands/summary
+   commands/update
 
 Commands
 --------
 
-   * :doc:`clone`
-   * :doc:`heads`
-   * :doc:`init`
-   * :doc:`paths`
-   * :doc:`pull`
-   * :doc:`push`
-   * :doc:`root`
-   * :doc:`summary`
-   * :doc:`update`
+   * :doc:`commands/clone`
+   * :doc:`commands/heads`
+   * :doc:`commands/init`
+   * :doc:`commands/paths`
+   * :doc:`commands/pull`
+   * :doc:`commands/push`
+   * :doc:`commands/root`
+   * :doc:`commands/summary`
+   * :doc:`commands/update`
 
 
 Indices and tables
