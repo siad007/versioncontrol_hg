@@ -31,6 +31,8 @@ Commands
    * :doc:`commands/root`
    * :doc:`commands/summary`
    * :doc:`commands/update`
+   * :doc:`commands/verify`
+   * :doc:`commands/version`
 
 Api docs:
 ---------
