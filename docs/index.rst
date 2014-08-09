@@ -12,13 +12,27 @@ VersionControl_HG is a library that provides an OO interface to handle Mercurial
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :hidden:
 
+   commands
 
+Commands
+--------
+
+   * clone
+   * heads
+   * init
+   * paths
+   * pull
+   * push
+   * root
+   * summary
+   * update
 
 Indices and tables
 ==================
 
+* :doc:`index`
 * :ref:`genindex`
 * :ref:`search`
 
