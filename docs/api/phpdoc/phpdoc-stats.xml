@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<phpdoc-stats version="2.4.0">
+  <stat date="2014-08-09T21:56:38+02:00">
+    <counters>
+        <files>15</files>
+        <deprecated>0</deprecated>
+        <errors>76</errors>
+        <markers>0</markers>
+    </counters>
+</stat>
+</phpdoc-stats>
