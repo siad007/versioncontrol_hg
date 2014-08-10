@@ -13,9 +13,7 @@
 namespace Siad007\VersionControl\HG\Command;
 
 /**
- * Simple OO implementation for Mercurial.
- *
- * @author Siad Ardroumli <siad.ardroumli@gmail.com>
+ * Base command.
  */
 class BaseCommand extends AbstractCommand
 {
@@ -26,7 +24,7 @@ class BaseCommand extends AbstractCommand
     protected $options = array();
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function __toString()
     {

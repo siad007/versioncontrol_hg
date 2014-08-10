@@ -14,6 +14,9 @@ namespace Siad007\VersionControl\HG;
 
 use Siad007\VersionControl\HG\Command\AbstractCommand;
 
+/**
+ * Factory class.
+ */
 class Factory
 {
     /**
@@ -50,6 +53,8 @@ class Factory
     }
 
     /**
+     * Creates a `CloneCommand` instance.
+     *
      * @param array $options
      *
      * @return \Siad007\VersionControl\HG\Command\CloneCommand
@@ -60,6 +65,8 @@ class Factory
     }
 
     /**
+     * Creates a `HeadsCommand` instance.
+     *
      * @param array $options
      *
      * @return \Siad007\VersionControl\HG\Command\HeadsCommand
@@ -70,6 +77,8 @@ class Factory
     }
 
     /**
+     * Creates a `InitCommand` instance.
+     *
      * @param array $options
      *
      * @return \Siad007\VersionControl\HG\Command\InitCommand
@@ -77,6 +86,54 @@ class Factory
     public static function createInit($options = array())
     {
         return self::getInstance('init', $options);
+    }
+
+    /**
+     * Creates a `PathsCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\PathsCommand
+     */
+    public static function createPaths($options = array())
+    {
+        return self::getInstance('paths', $options);
+    }
+
+    /**
+     * Creates a `PullCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\PullCommand
+     */
+    public static function createPull($options = array())
+    {
+        return self::getInstance('pull', $options);
+    }
+
+    /**
+     * Creates a `PushCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\PushCommand
+     */
+    public static function createPush($options = array())
+    {
+        return self::getInstance('push', $options);
+    }
+
+    /**
+     * Creates a `RootCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\RootCommand
+     */
+    public static function createRoot($options = array())
+    {
+        return self::getInstance('root', $options);
     }
 
     /**

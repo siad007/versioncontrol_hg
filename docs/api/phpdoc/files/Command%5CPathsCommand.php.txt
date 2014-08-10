@@ -51,7 +51,7 @@ class PathsCommand extends AbstractCommand
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function __toString()
     {

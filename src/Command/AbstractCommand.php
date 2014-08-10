@@ -79,6 +79,8 @@ abstract class AbstractCommand
 
     /**
      * Returns a string representation for the mercurial shell command.
+     *
+     * @return string
      */
     abstract public function __toString();
 

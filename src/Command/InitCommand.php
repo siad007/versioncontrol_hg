@@ -57,7 +57,7 @@ class InitCommand extends AbstractCommand
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function __toString()
     {

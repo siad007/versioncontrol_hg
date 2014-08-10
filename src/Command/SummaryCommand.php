@@ -31,7 +31,7 @@ class SummaryCommand extends AbstractCommand
     );
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function __toString()
     {

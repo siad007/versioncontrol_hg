@@ -40,7 +40,7 @@ class UpdateCommand extends AbstractCommand
     );
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function __toString()
     {

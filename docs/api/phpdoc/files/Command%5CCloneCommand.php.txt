@@ -85,9 +85,7 @@ class CloneCommand extends AbstractCommand
     }
 
     /**
-     * @return string
-     *
-     * @throws \InvalidArgumentException
+     * {@inheritdoc}
      */
     public function __toString()
     {

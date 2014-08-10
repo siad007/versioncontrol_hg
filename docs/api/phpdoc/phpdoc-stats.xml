@@ -26,9 +26,17 @@
   </stat>
   <stat date="2014-08-10T00:22:01+02:00">
     <counters>
+      <files>15</files>
+      <deprecated>0</deprecated>
+      <errors>61</errors>
+      <markers>0</markers>
+    </counters>
+  </stat>
+  <stat date="2014-08-10T02:17:10+02:00">
+    <counters>
         <files>15</files>
         <deprecated>0</deprecated>
-        <errors>61</errors>
+        <errors>52</errors>
         <markers>0</markers>
     </counters>
 </stat>
