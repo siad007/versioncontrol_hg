@@ -9,6 +9,7 @@ Contents:
 .. toctree::
    :hidden:
 
+   commands/add
    commands/clone
    commands/heads
    commands/init
@@ -24,6 +25,7 @@ Contents:
 Commands
 --------
 
+   * :doc:`commands/add`
    * :doc:`commands/clone`
    * :doc:`commands/heads`
    * :doc:`commands/init`

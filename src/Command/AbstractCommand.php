@@ -149,8 +149,9 @@ abstract class AbstractCommand
      */
     public function __call($name, $arguments)
     {
-        if (preg_match('~^(set|get|add)([A-Z])(.*)$~', $name, $matches)) {
-            $property = strtolower($matches[2]) . $matches[3];
+        if (preg_match('~^(set|get|add)([A-Z])([a-z]*)([A-Z]?)(.*)$~', $name, $matches)) {
+            $match = !empty($matches[4]) ? sprintf('-%s%s', strtolower($matches[4]), $matches[5]) : '';
+            $property = strtolower($matches[2]) . $matches[3] . $match;
 
             if (! isset($this->options["--{$property}"])) {
                 throw new \InvalidArgumentException('Property ' . $property . ' not exists');
