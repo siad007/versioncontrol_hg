@@ -46,6 +46,8 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setHelp(boolean $flag)
  * @method boolean getHidden()
  * @method void setHidden(boolean $flag)
+ * @method array getConfig()
+ * @method void addConfig(string $config)
  */
 abstract class AbstractCommand
 {
@@ -69,6 +71,7 @@ abstract class AbstractCommand
         '--noninteractive' => false,
         '--quiet'          => false,
         '--verbose'        => false,
+        '--config'         => array(),
         '--debug'          => false,
         '--debugger'       => false,
         '--encoding'       => '',
