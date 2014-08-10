@@ -13,9 +13,34 @@
 namespace Siad007\VersionControl\HG;
 
 use Siad007\VersionControl\HG\Command\AbstractCommand;
+use Siad007\VersionControl\HG\Command\CloneCommand;
+use Siad007\VersionControl\HG\Command\HeadsCommand;
+use Siad007\VersionControl\HG\Command\InitCommand;
+use Siad007\VersionControl\HG\Command\PathsCommand;
+use Siad007\VersionControl\HG\Command\PullCommand;
+use Siad007\VersionControl\HG\Command\PushCommand;
+use Siad007\VersionControl\HG\Command\RootCommand;
+use Siad007\VersionControl\HG\Command\SummaryCommand;
+use Siad007\VersionControl\HG\Command\TagsCommand;
+use Siad007\VersionControl\HG\Command\UpdateCommand;
+use Siad007\VersionControl\HG\Command\VerifyCommand;
+use Siad007\VersionControl\HG\Command\VersionCommand;
 
 /**
  * Factory class.
+ *
+ * @method static CloneCommand createClone(array $options = array())
+ * @method static HeadsCommand createHeads(array $options = array())
+ * @method static InitCommand createInit(array $options = array())
+ * @method static PathsCommand createPaths(array $options = array())
+ * @method static PullCommand createPull(array $options = array())
+ * @method static PushCommand createPush(array $options = array())
+ * @method static RootCommand createRoot(array $options = array())
+ * @method static SummaryCommand createSummary(array $options = array())
+ * @method static TagsCommand createTags(array $options = array())
+ * @method static UpdateCommand createUpdate(array $options = array())
+ * @method static VerifyCommand createVerify(array $options = array())
+ * @method static VersionCommand createVersion(array $options = array())
  */
 class Factory
 {
@@ -53,147 +78,28 @@ class Factory
     }
 
     /**
-     * Creates a `CloneCommand` instance.
+     * Magic method to reduce the number of methods.
      *
-     * @param array $options
+     * @param string $name
+     * @param array $arguments
      *
-     * @return \Siad007\VersionControl\HG\Command\CloneCommand
+     * @return AbstractCommand
+     *
+     * @throws \InvalidArgumentException
      */
-    public static function createClone($options = array())
+    public static function __callStatic($name, $arguments)
     {
-        return self::getInstance('clone', $options);
-    }
+        if (strpos($name, 'create') !== 0) {
+            throw new \InvalidArgumentException(
+                "Create command $name not supported."
+            );
+        } else {
+            $command = strtolower(str_replace('create', '', $name));
+        }
 
-    /**
-     * Creates a `HeadsCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\HeadsCommand
-     */
-    public static function createHeads($options = array())
-    {
-        return self::getInstance('heads', $options);
-    }
+        $options = isset($arguments[0]) && is_array($arguments[0]) ? $arguments[0] : array();
 
-    /**
-     * Creates a `InitCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\InitCommand
-     */
-    public static function createInit($options = array())
-    {
-        return self::getInstance('init', $options);
-    }
-
-    /**
-     * Creates a `PathsCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\PathsCommand
-     */
-    public static function createPaths($options = array())
-    {
-        return self::getInstance('paths', $options);
-    }
-
-    /**
-     * Creates a `PullCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\PullCommand
-     */
-    public static function createPull($options = array())
-    {
-        return self::getInstance('pull', $options);
-    }
-
-    /**
-     * Creates a `PushCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\PushCommand
-     */
-    public static function createPush($options = array())
-    {
-        return self::getInstance('push', $options);
-    }
-
-    /**
-     * Creates a `RootCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\RootCommand
-     */
-    public static function createRoot($options = array())
-    {
-        return self::getInstance('root', $options);
-    }
-
-    /**
-     * Creates a `SummaryCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\SummaryCommand
-     */
-    public static function createSummary($options = array())
-    {
-        return self::getInstance('summary', $options);
-    }
-
-    /**
-     * Creates a `TagsCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\TagsCommand
-     */
-    public static function createTags($options = array())
-    {
-        return self::getInstance('tags', $options);
-    }
-
-    /**
-     * Creates a `UpdateCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\UpdateCommand
-     */
-    public static function createUpdate($options = array())
-    {
-        return self::getInstance('update', $options);
-    }
-
-    /**
-     * Creates a `VerifyCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\VerifyCommand
-     */
-    public static function createVerify($options = array())
-    {
-        return self::getInstance('verify', $options);
-    }
-
-    /**
-     * Creates a `VersionCommand` instance.
-     *
-     * @param array $options
-     *
-     * @return \Siad007\VersionControl\HG\Command\VersionCommand
-     */
-    public static function createVersion($options = array())
-    {
-        return self::getInstance('version', $options);
+        return self::getInstance($command, $options);
     }
 
     /**
