@@ -52,10 +52,14 @@ abstract class AbstractCommand
     /** @var string $name */
     protected $name = '';
 
-    /**  @var string $command */
+    /** @var string $command */
     protected $command = 'hg %s';
 
-    /** @var array $options */
+    /**
+     * Command specific options.
+     *
+     * @var array $options
+     */
     protected $options = array();
 
     /** @var array $globalOptions */
@@ -86,8 +90,11 @@ abstract class AbstractCommand
 
     /**
      * Standard constructor.
+     *
      * - sets the concrete commands name
      * - merges the global options with the concrete commands options
+     *
+     * @param mixed $options
      */
     public function __construct($options = array())
     {
@@ -152,6 +159,8 @@ abstract class AbstractCommand
     }
 
     /**
+     * Concatinates string options.
+     *
      * @return string
      */
     protected function assembleOptionString()

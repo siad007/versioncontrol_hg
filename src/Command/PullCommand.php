@@ -41,7 +41,11 @@ class PullCommand extends AbstractCommand
         'source' => ''
     );
 
-    /** @var mixed $options */
+    /**
+     * {@inheritdoc}
+     *
+     * @var mixed $options
+     */
     protected $options = array(
         '--update'    => false,
         '--force'     => false,

@@ -19,6 +19,12 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @method boolean getNoupdate()
  * @method void setNoupdate(boolean $flag)
+ * @method string getUpdaterev()
+ * @method void setUpdaterev(string $revision)
+ * @method string getRev()
+ * @method void addRev(string $revision)
+ * @method string getBranch()
+ * @method void addBranch(string $branch)
  * @method boolean getPull()
  * @method void setPull(boolean $flag)
  * @method boolean getUncompressed()
@@ -38,9 +44,16 @@ class CloneCommand extends AbstractCommand
         'source'      => ''
     );
 
-    /** @var mixed $options */
+    /**
+     * {@inheritdoc}
+     *
+     * @var mixed $options
+     */
     protected $options = array(
         '--noupdate'     => false,
+        '--updaterev'    => '',
+        '--rev'          => array(),
+        '--branch'       => array(),
         '--pull'         => false,
         '--uncompressed' => false,
         '--ssh'       => '',

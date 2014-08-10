@@ -35,7 +35,11 @@ class PushCommand extends AbstractCommand
         'destination' => ''
     );
 
-    /** @var mixed $options */
+    /**
+     * {@inheritdoc}
+     *
+     * @var mixed $options
+     */
     protected $options = array(
         '--force'      => false,
         '--new-branch' => false,

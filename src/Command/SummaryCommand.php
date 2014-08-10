@@ -25,7 +25,11 @@ class SummaryCommand extends AbstractCommand
     /** @var array $arguments */
     protected $arguments = array();
 
-    /** @var mixed $options */
+    /**
+     * {@inheritdoc}
+     *
+     * @var mixed $options
+     */
     protected $options = array(
         '--remote'  => false
     );

@@ -31,7 +31,11 @@ class InitCommand extends AbstractCommand
         'destination' => '.'
     );
 
-    /** @var mixed $options */
+    /**
+     * {@inheritdoc}
+     *
+     * @var mixed $options
+     */
     protected $options = array(
         '--ssh'       => '',
         '--remotecmd' => '',

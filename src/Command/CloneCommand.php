@@ -44,7 +44,11 @@ class CloneCommand extends AbstractCommand
         'source'      => ''
     );
 
-    /** @var mixed $options */
+    /**
+     * {@inheritdoc}
+     *
+     * @var mixed $options
+     */
     protected $options = array(
         '--noupdate'     => false,
         '--updaterev'    => '',
