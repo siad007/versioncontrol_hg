@@ -17,16 +17,16 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
+ * @method string getSimilarity()
+ * @method void addSimilarity(string $similarity)
  * @method array getInclude()
  * @method void addInclude(string $pattern)
  * @method array getExclude()
  * @method void addExclude(string $pattern)
- * @method boolean getSubrepos()
- * @method void setSubrepos(boolean $flag)
  * @method boolean getDryRun()
  * @method void setDryRun(boolean $flag)
  */
-class AddCommand extends AbstractCommand
+class AddremoveCommand extends AbstractCommand
 {
     /** @var array $arguments */
     protected $arguments = array(
@@ -39,10 +39,10 @@ class AddCommand extends AbstractCommand
      * @var mixed $options
      */
     protected $options = array(
-        '--include'  => array(),
-        '--exclude'  => array(),
-        '--subrepos' => false,
-        '--dry-run'  => false
+        '--similarity' => '',
+        '--include'    => array(),
+        '--exclude'    => array(),
+        '--dry-run'    => false
     );
 
     /**
@@ -76,3 +76,4 @@ class AddCommand extends AbstractCommand
         );
     }
 }
+

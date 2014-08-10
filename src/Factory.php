@@ -31,6 +31,7 @@ use Siad007\VersionControl\HG\Command\VersionCommand;
  * Factory class.
  *
  * @method static AddCommand createAdd(array $options = array())
+ * @method static AddremoveCommand createAddremove(array $options = array())
  * @method static CloneCommand createClone(array $options = array())
  * @method static HeadsCommand createHeads(array $options = array())
  * @method static InitCommand createInit(array $options = array())

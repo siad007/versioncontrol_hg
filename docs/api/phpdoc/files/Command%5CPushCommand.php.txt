@@ -27,6 +27,12 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setRemotecmd(string $command)
  * @method boolean getInsecure()
  * @method void setInsecure(boolean $flag)
+ * @method array getRev()
+ * @method void addRev(string $revision)
+ * @method array getBookmark()
+ * @method void addBookmark(string $bookmark)
+ * @method array getBranch()
+ * @method void addBranch(string $branch)
  */
 class PushCommand extends AbstractCommand
 {
@@ -42,6 +48,9 @@ class PushCommand extends AbstractCommand
      */
     protected $options = array(
         '--force'      => false,
+        '--rev'        => array(),
+        '--bookmark'   => array(),
+        '--branch'     => array(),
         '--new-branch' => false,
         '--ssh'        => '',
         '--remotecmd'  => '',
@@ -49,6 +58,8 @@ class PushCommand extends AbstractCommand
     );
 
     /**
+     * Get the destination.
+     *
      * @return string
      */
     public function getDestination()
@@ -57,6 +68,8 @@ class PushCommand extends AbstractCommand
     }
 
     /**
+     * Set the destination.
+     *
      * @param string $destination
      *
      * @return void

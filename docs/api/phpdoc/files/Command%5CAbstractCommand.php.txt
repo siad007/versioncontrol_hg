@@ -46,6 +46,8 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setHelp(boolean $flag)
  * @method boolean getHidden()
  * @method void setHidden(boolean $flag)
+ * @method array getConfig()
+ * @method void addConfig(string $config)
  */
 abstract class AbstractCommand
 {
@@ -69,6 +71,7 @@ abstract class AbstractCommand
         '--noninteractive' => false,
         '--quiet'          => false,
         '--verbose'        => false,
+        '--config'         => array(),
         '--debug'          => false,
         '--debugger'       => false,
         '--encoding'       => '',
@@ -105,6 +108,13 @@ abstract class AbstractCommand
 
     /**
      * Main run function.
+     *
+     * @param boolean $return If you would like to output the command instead of
+     *                        executing, use the return parameter. When this
+     *                        parameter is set to true, run will return the
+     *                        information rather than executing it.
+     *
+     * @return string
      */
     public function run($return = false)
     {
@@ -139,8 +149,9 @@ abstract class AbstractCommand
      */
     public function __call($name, $arguments)
     {
-        if (preg_match('~^(set|get|add)([A-Z])(.*)$~', $name, $matches)) {
-            $property = strtolower($matches[2]) . $matches[3];
+        if (preg_match('~^(set|get|add)([A-Z])([a-z]*)([A-Z]?)(.*)$~', $name, $matches)) {
+            $match = !empty($matches[4]) ? sprintf('-%s%s', strtolower($matches[4]), $matches[5]) : '';
+            $property = strtolower($matches[2]) . $matches[3] . $match;
 
             if (! isset($this->options["--{$property}"])) {
                 throw new \InvalidArgumentException('Property ' . $property . ' not exists');

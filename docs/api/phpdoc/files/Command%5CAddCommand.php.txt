@@ -76,3 +76,4 @@ class AddCommand extends AbstractCommand
         );
     }
 }
+

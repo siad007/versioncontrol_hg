@@ -32,7 +32,55 @@
     <script src="../js/jqplot/plugins/jqplot.enhancedLegendRenderer.min.js"></script>
     <script src="../js/jqplot/plugins/jqplot.json2.min.js"></script>
     <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
-    
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
+        });
+        $('#source-view').on('shown', function () {
+            loadExternalCodeSnippets();
+        })
+    </script>
+
     <link rel="shortcut icon" href="../images/favicon.ico"/>
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
     <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
@@ -107,46 +155,46 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1955747146"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-10128229"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1955747146" class="accordion-body collapse in">
+            <div id="namespace-10128229" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-117141423"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1327800147"></a>
                                 <a href="../namespaces/Siad007.html" style="margin-left: 30px; padding-left: 0">Siad007</a>
             </div>
-            <div id="namespace-117141423" class="accordion-body collapse ">
+            <div id="namespace-1327800147" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1959031857"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1410399173"></a>
                                 <a href="../namespaces/Siad007.VersionControl.html" style="margin-left: 30px; padding-left: 0">VersionControl</a>
             </div>
-            <div id="namespace-1959031857" class="accordion-body collapse ">
+            <div id="namespace-1410399173" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1707677249"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1952615650"></a>
                                 <a href="../namespaces/Siad007.VersionControl.HG.html" style="margin-left: 30px; padding-left: 0">HG</a>
             </div>
-            <div id="namespace-1707677249" class="accordion-body collapse ">
+            <div id="namespace-1952615650" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1141631343"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1889951553"></a>
                                 <a href="../namespaces/Siad007.VersionControl.HG.Command.html" style="margin-left: 30px; padding-left: 0">Command</a>
             </div>
-            <div id="namespace-1141631343" class="accordion-body collapse ">
+            <div id="namespace-1889951553" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -211,147 +259,56 @@
     <section class="row-fluid">
         <div class="span10 offset2">
             <div class="row-fluid">
-                <div class="span8 content namespace">
+                <div class="span8 content file">
                     <nav>
-                                                <a href="../namespaces/Siad007.html">\Siad007</a>
-                                            </nav>
-                    <h1><small>\Siad007</small>VersionControl</h1>
+                                                                    </nav>
 
-                                        <h2>Namespaces</h2>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+                    <h1><small></small>AddremoveCommand.php</h1>
+                    <p><em>VersionControl_HG
+Simple OO implementation for Mercurial.</em></p>
+                    <p>PHP Version 5.4</p>
+
+                    
+                    
+                                        <h2>Classes</h2>
                     <table class="table table-hover">
-                                                    <tr>
-                                <td><a href="../namespaces/Siad007.VersionControl.HG.html">HG</a></td>
-                            </tr>
-                                            </table>
-                    
-                    
-                    
-                                            <h2>Statistics</h2>
-							<div id="statistics"></div>
-							<hr />
-							<div class="btn btn-small btn-info">Reset Zoom</div>
-							<hr />
-	        <script type="text/javaScript">
-        $(document).ready(function(){
-          var ajaxDataRenderer = function(url, plot, options) {
-            var stats = null;
-            $.ajax({
-              async: false,
-              url: url,
-              dataType:"xml",
-              success: function(data) {
-                stats = $.xml2json(data);
-
-                var files = [], item;
-                var deprecated = [], item;
-                var errors = [], item;
-                var markers = [], item;
-                var datestring = [], item;
-
-                $.each(stats.stat, function(key, value){
-                    var datestr = value.date;
-                    var yy = datestr.substring(0,4);
-                    var mo = datestr.substring(5,7);
-                    var dd = datestr.substring(8,10);
-                    var hh = datestr.substring(11,13);
-                    var mi = datestr.substring(14,16);
-                    var ss = datestr.substring(17,19);
-                    var tzs = datestr.substring(19,20);
-                    var tzhh = datestr.substring(20,22);
-                    var tzmi = datestr.substring(23,25);
-                    var myutc = Date.UTC(yy-0,mo-1,dd-0,hh-0,mi-0,ss-0);
-                    var tzos = (tzs+(tzhh * 60 + tzmi * 1)) * 60000;
-                    date = new Date(myutc-tzos);
-                    
-                    files.push([date.toString(), parseFloat(value.counters.files)]);
-                    deprecated.push([date.toString(), parseFloat(value.counters.deprecated)]);
-                    errors.push([date.toString(), parseFloat(value.counters.errors)]);
-                    markers.push([date.toString(), parseFloat(value.counters.markers)]);
-                });
-
-                var ret = [], item;
-                ret.push(files, deprecated, errors, markers);
-
-                stats = ret;
-              }
-            });
-            
-            return stats;
-          };
-         
-          var xmlurl = "../phpdoc-stats.xml";
-          var xml = ajaxDataRenderer(xmlurl);
-          var statistics = $.jqplot('statistics', xmlurl,{
-                dataRenderer: ajaxDataRenderer,
-                series:[
-                    {'label': 'files', 'color' : "rgba(128, 128, 128, 0.8)", fill: true},
-                    {'label': 'deprecated', 'color' : "rgba(0, 0, 255, 0.5)", fill: true},
-                    {'label': 'errors', 'color' : "rgba(255, 0, 0, 0.3)", fill: true},
-                    {'label': 'markers', 'color' : "rgba(255, 255, 0, 0.1)", fill: true}],
-                axes: {
-                    xaxis: {
-                        renderer: $.jqplot.DateAxisRenderer,
-                        rendererOptions:{
-                            tickRenderer:$.jqplot.CanvasAxisTickRenderer
-                        },
-                        tickOptions: {
-                            formatString: '%Y-%#m-%#d',
-                            angle:-40,
-                            fontSize: '10px',
-                            fontFamily: ["Helvetica Neue","Helvetica","Arial","sans-serif"]
-                        },
-                        tickInterval: '1 week',
-                        min: xml[0][0][0],
-                        max: xml[0][xml[0].length-1][0]
-                    },
-                    yaxis: {
-                        tickOptions: { formatString: '%.0f' },
-                        min: 0
-                    }
-                },
-                cursor:{
-                    show: true,
-                    zoom: true,
-                    showTooltip: true,
-                    tooltipLocation: 'ne'
-                },
-                axesDefaults: {
-                    useSeriesColor: true,
-                    labelRenderer: $.jqplot.CanvasAxisLabelRenderer
-                },
-                seriesDefaults: {
-                    lineWidth: 2,
-                    style: 'square'
-                },
-                legend: {
-                    renderer: $.jqplot.EnhancedLegendRenderer,
-                    show: true,
-                    showLabels: true,
-                    location: 'ne',
-                    placement: 'inside',
-                    fontSize: '12px',
-                    fontFamily: ["Helvetica Neue","Helvetica","Arial","sans-serif"],
-                    rendererOptions: {
-                        seriesToggle: 'normal'
-                    }
-                }
-          });
-          $('.btn').click(function() { statistics.resetZoom() });
-        });
-        </script>
-                    </div>
+                                            <tr>
+                            <td><a href="../classes/Siad007.VersionControl.HG.Command.AddremoveCommand.html">AddremoveCommand</a></td>
+                            <td><em>Simple OO implementation for Mercurial.</em></td>
+                        </tr>
+                                        </table>
+                                    </div>
 
                 <aside class="span4 detailsbar">
                     <dl>
-                        <dt>Namespace hierarchy</dt>
-                        <dd class="hierarchy">
-                                                                                                                                                                                                                                                                                                                                                                                                            
-                                    <div class="namespace-wrapper"><a href="../namespaces/default.html">\</a></div>
-                                                            
-                                    <div class="namespace-wrapper"><a href="../namespaces/Siad007.html">\Siad007</a></div>
-                                                                                        <div class="namespace-wrapper">\Siad007\VersionControl</div>
-                        </dd>
+                                                    <dt>Package</dt>
+                            <dd><div class="namespace-wrapper"></div></dd>
+                        
+                                                                                    <dt>See also</dt>
+                                                                                        <dd><a href="http://siad007.github.io/versioncontrol_hg"><div class="namespace-wrapper">http://siad007.github.io/versioncontrol_hg</div></a></dd>
+                                                    
                     </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                                    <tr>
+                                <th>
+                                    copyright
+                                </th>
+                                <td>
+                                                                            <p>2014 Siad Ardroumli</p>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <th>
+                                    license
+                                </th>
+                                <td>
+                                                                            <p><a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a> MIT</p>
+                                                                    </td>
+                            </tr>
+                                            </table>
+
                 </aside>
             </div>
 
@@ -359,6 +316,16 @@
             
         </div>
     </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label"></h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Command\AddremoveCommand.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
 
     <footer class="row-fluid">
         <section class="span10 offset2">
