@@ -137,6 +137,66 @@ class Factory
     }
 
     /**
+     * Creates a `SummaryCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\SummaryCommand
+     */
+    public static function createSummary($options = array())
+    {
+        return self::getInstance('summary', $options);
+    }
+
+    /**
+     * Creates a `TagsCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\TagsCommand
+     */
+    public static function createTags($options = array())
+    {
+        return self::getInstance('tags', $options);
+    }
+
+    /**
+     * Creates a `UpdateCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\UpdateCommand
+     */
+    public static function createUpdate($options = array())
+    {
+        return self::getInstance('update', $options);
+    }
+
+    /**
+     * Creates a `VerifyCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\VerifyCommand
+     */
+    public static function createVerify($options = array())
+    {
+        return self::getInstance('verify', $options);
+    }
+
+    /**
+     * Creates a `VersionCommand` instance.
+     *
+     * @param array $options
+     *
+     * @return \Siad007\VersionControl\HG\Command\VersionCommand
+     */
+    public static function createVersion($options = array())
+    {
+        return self::getInstance('version', $options);
+    }
+
+    /**
      * Disabled clone behavior.
      */
     final private function __clone()

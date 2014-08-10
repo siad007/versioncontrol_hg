@@ -11,8 +11,7 @@ class VerifyCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function verifyCommand()
     {
-        /* @var $verifyCmd \Siad007\VersionControl\HG\Command\VerifyCommand */
-        $verifyCmd = Factory::getInstance('verify');
+        $verifyCmd = Factory::createVerify();
 
         $expected = 'hg verify';
 

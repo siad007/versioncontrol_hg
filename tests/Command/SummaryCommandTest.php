@@ -11,8 +11,7 @@ class SummaryCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function initCommand()
     {
-        /* @var $summaryCmd \Siad007\VersionControl\HG\Command\SummaryCommand */
-        $summaryCmd = Factory::getInstance('summary');
+        $summaryCmd = Factory::createSummary();
         $summaryCmd->setRemote(true);
 
         $expected = 'hg summary --remote';

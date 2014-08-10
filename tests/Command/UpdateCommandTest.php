@@ -11,8 +11,7 @@ class UpdateCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function updateCommand()
     {
-        /* @var $updateCmd \Siad007\VersionControl\HG\Command\UpdateCommand */
-        $updateCmd = Factory::getInstance('update');
+        $updateCmd = Factory::createUpdate();
         $updateCmd->setClean(true);
         $updateCmd->setCheck(true);
         $updateCmd->setDate('date');
