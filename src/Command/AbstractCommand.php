@@ -108,6 +108,13 @@ abstract class AbstractCommand
 
     /**
      * Main run function.
+     *
+     * @param boolean $return If you would like to output the command instead of
+     *                        executing, use the return parameter. When this
+     *                        parameter is set to true, run will return the
+     *                        information rather than executing it.
+     *
+     * @return string
      */
     public function run($return = false)
     {
