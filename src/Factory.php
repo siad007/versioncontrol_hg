@@ -84,7 +84,7 @@ class Factory
      * Magic method to reduce the number of methods.
      *
      * @param string $name
-     * @param array $arguments
+     * @param array  $arguments
      *
      * @return AbstractCommand
      *
