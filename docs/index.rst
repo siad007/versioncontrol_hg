@@ -10,7 +10,7 @@ Contents:
    :hidden:
 
    commands/add
-   command/addremove
+   commands/addremove
    commands/clone
    commands/heads
    commands/init
@@ -27,7 +27,7 @@ Commands
 --------
 
    * :doc:`commands/add`
-   * :doc:`command/addremove`
+   * :doc:`commands/addremove`
    * :doc:`commands/clone`
    * :doc:`commands/heads`
    * :doc:`commands/init`
