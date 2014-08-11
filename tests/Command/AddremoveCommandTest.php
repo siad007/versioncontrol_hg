@@ -15,8 +15,8 @@ class AddremoveCommandTest extends \PHPUnit_Framework_TestCase
         $addremoveCmd->addFile('C:\\xampp\\file1\\');
         $addremoveCmd->addFile('C:\\xampp\\file2\\');
         $addremoveCmd->setSimilarity('50');
-        $addremoveCmd->setInclude('includePattern');
-        $addremoveCmd->setExclude('excludePattern');
+        $addremoveCmd->addInclude('includePattern');
+        $addremoveCmd->addExclude('excludePattern');
         $addremoveCmd->setDryRun(true);
 
         $file = '\'C:\xampp\file1\\\' \'C:\xampp\file2\\\'';

@@ -13,8 +13,8 @@ class AddCommandTest extends \PHPUnit_Framework_TestCase
     {
         $addCmd = Factory::createAdd();
         $addCmd->addFile('C:\\xampp\\file\\');
-        $addCmd->setInclude('includePattern');
-        $addCmd->setExclude('excludePattern');
+        $addCmd->addInclude('includePattern');
+        $addCmd->addExclude('excludePattern');
         $addCmd->setSubrepos(true);
         $addCmd->setDryRun(true);
 
