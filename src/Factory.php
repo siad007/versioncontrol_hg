@@ -14,6 +14,7 @@ namespace Siad007\VersionControl\HG;
 
 use Siad007\VersionControl\HG\Command\AbstractCommand;
 use Siad007\VersionControl\HG\Command\AddCommand;
+use Siad007\VersionControl\HG\Command\CatCommand;
 use Siad007\VersionControl\HG\Command\CloneCommand;
 use Siad007\VersionControl\HG\Command\HeadsCommand;
 use Siad007\VersionControl\HG\Command\InitCommand;
@@ -30,20 +31,21 @@ use Siad007\VersionControl\HG\Command\VersionCommand;
 /**
  * Factory class.
  *
- * @method static AddCommand createAdd(array $options = array())
- * @method static AddremoveCommand createAddremove(array $options = array())
- * @method static CloneCommand createClone(array $options = array())
- * @method static HeadsCommand createHeads(array $options = array())
- * @method static InitCommand createInit(array $options = array())
- * @method static PathsCommand createPaths(array $options = array())
- * @method static PullCommand createPull(array $options = array())
- * @method static PushCommand createPush(array $options = array())
- * @method static RootCommand createRoot(array $options = array())
- * @method static SummaryCommand createSummary(array $options = array())
- * @method static TagsCommand createTags(array $options = array())
- * @method static UpdateCommand createUpdate(array $options = array())
- * @method static VerifyCommand createVerify(array $options = array())
- * @method static VersionCommand createVersion(array $options = array())
+ * @method static AddCommand createAdd(array $options = array)
+ * @method static AddremoveCommand createAddremove(array $options = array)
+ * @method static CatCommand createCat(array $options = array)
+ * @method static CloneCommand createClone(array $options = array)
+ * @method static HeadsCommand createHeads(array $options = array)
+ * @method static InitCommand createInit(array $options = array)
+ * @method static PathsCommand createPaths(array $options = array)
+ * @method static PullCommand createPull(array $options = array)
+ * @method static PushCommand createPush(array $options = array)
+ * @method static RootCommand createRoot(array $options = array)
+ * @method static SummaryCommand createSummary(array $options = array)
+ * @method static TagsCommand createTags(array $options = array)
+ * @method static UpdateCommand createUpdate(array $options = array)
+ * @method static VerifyCommand createVerify(array $options = array)
+ * @method static VersionCommand createVersion(array $options = array)
  */
 class Factory
 {
