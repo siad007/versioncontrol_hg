@@ -11,7 +11,28 @@ Contents:
 
    commands/add
    commands/addremove
+   
+   commands/annotate
+   commands/archive
+   commands/backout
+   commands/bisect
+   commands/bookmarks
+   commands/branch
+   commands/branches
+   commands/bundle
+   commands/cat
+   
    commands/clone
+   
+   commands/commit
+   commands/config
+   commands/copy
+   commands/diff
+   commands/export
+   commands/forget
+   commands/graft
+   commands/grep
+   
    commands/heads
    commands/init
    commands/paths
@@ -28,9 +49,39 @@ Commands
 
    * :doc:`commands/add`
    * :doc:`commands/addremove`
+   
+   * :doc:`commands/annotate`
+   * :doc:`commands/archive`
+   * :doc:`commands/backout`
+   * :doc:`commands/bisect`
+   * :doc:`commands/bookmarks`
+   * :doc:`commands/branch`
+   * :doc:`commands/branches`
+   * :doc:`commands/bundle`
+   * :doc:`commands/cat`
+
    * :doc:`commands/clone`
+
+   * :doc:`commands/commit`
+   * :doc:`commands/config`
+   * :doc:`commands/copy`
+   * :doc:`commands/diff`
+   * :doc:`commands/export`
+   * :doc:`commands/forget`
+   * :doc:`commands/graft`
+   * :doc:`commands/grep`
+
    * :doc:`commands/heads`
+
+   * :doc:`commands/help`
+   * :doc:`commands/identify`
+   * :doc:`commands/import`
+   * :doc:`commands/incoming`
+   
    * :doc:`commands/init`
+   
+   
+   
    * :doc:`commands/paths`
    * :doc:`commands/pull`
    * :doc:`commands/push`

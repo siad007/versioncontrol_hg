@@ -17,16 +17,18 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
- * @method string getSimilarity()
- * @method void setSimilarity(string $similarity)
+ * @method string getOutput()
+ * @method void setOutput(string $output)
+ * @method string getRev()
+ * @method void setRev(string $output)
+ * @method boolean getDecode()
+ * @method void setDecode(boolean $flag)
  * @method array getInclude()
  * @method void addInclude(string $pattern)
  * @method array getExclude()
  * @method void addExclude(string $pattern)
- * @method boolean getDryRun()
- * @method void setDryRun(boolean $flag)
  */
-class AddremoveCommand extends AbstractCommand
+class CatCommand extends AbstractCommand
 {
     /** @var array $arguments */
     protected $arguments = array(
@@ -39,10 +41,11 @@ class AddremoveCommand extends AbstractCommand
      * @var mixed $options
      */
     protected $options = array(
-        '--similarity' => '',
-        '--include'    => array(),
-        '--exclude'    => array(),
-        '--dry-run'    => false
+        '--output'  => '',
+        '--rev'     => '',
+        '--decode'  => false,
+        '--include' => array(),
+        '--exclude' => array(),
     );
 
     /**
