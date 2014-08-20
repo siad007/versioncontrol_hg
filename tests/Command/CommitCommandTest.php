@@ -14,7 +14,7 @@ namespace Siad007\VersionControl\HG\Tests\Command;
 
 use Siad007\VersionControl\HG\Factory;
 
-class CommitCommandTestCommandTest extends \PHPUnit_Framework_TestCase
+class CommitCommandTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
