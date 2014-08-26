@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<phpunit bootstrap="vendor/autoload.php"
-         colors="true"
-         strict="true"
-         convertErrorsToExceptions="true"
-         stopOnError="false">
+<phpunit bootstrap="vendor/autoload.php" colors="true" strict="true">
     <testsuites>
         <testsuite name="VersionControl_HG">
             <directory>tests</directory>

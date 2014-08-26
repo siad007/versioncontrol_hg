@@ -16,6 +16,30 @@ use Siad007\VersionControl\HG\Factory;
 
 class CloneCommandTest extends \PHPUnit_Framework_TestCase
 {
+    private $errors;
+
+    protected function setUp() {
+        $this->errors = array();
+        set_error_handler(array($this, "errorHandler"));
+    }
+
+    public function errorHandler($errno, $errstr, $errfile, $errline, $errcontext) {
+        $this->errors[] = compact("errno", "errstr", "errfile",
+            "errline", "errcontext");
+    }
+
+    public function assertError($errstr, $errno) {
+        foreach ($this->errors as $error) {
+            if ($error["errstr"] === $errstr
+                && $error["errno"] === $errno) {
+                    return;
+                }
+        }
+        $this->fail("Error with level " . $errno .
+            " and message '" . $errstr . "' not found in ",
+            var_export($this->errors, TRUE));
+    }
+
     /**
      * @test
      */
@@ -57,7 +81,6 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException PHPUnit_Framework_Error
      */
     public function cloneCommandWithoutSource()
     {
@@ -66,5 +89,7 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
         $cloneCmd->setUncompressed(true);
         $cloneCmd->setInsecure(true);
         $cloneCmd->run(true);
+
+        $this->assertError("No source directory given.", E_USER_ERROR);
     }
 }
