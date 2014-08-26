@@ -17,7 +17,11 @@ namespace Siad007\VersionControl\HG\Command;
  */
 class BaseCommand extends AbstractCommand
 {
-    /** @var array $arguments */
+    /**
+     * Available arguments for this command.
+     *
+     * @var array $arguments
+     */
     protected $arguments = array();
 
     /** @var mixed $options */

@@ -35,7 +35,7 @@
 <text text-anchor="middle" x="277" y="-809.2" font-family="Times New Roman,serif" font-size="11.00">PushCommand</text>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="node13" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<g id="node16" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
 <polygon fill="none" stroke="black" points="148,-479 48,-479 48,-443 148,-443 148,-479"/>
 <text text-anchor="start" x="75" y="-464.2" font-family="Times New Roman,serif" font-size="11.00">«abstract»</text>
 <text text-anchor="start" x="56" y="-452.2" font-family="Times New Roman,serif" font-size="11.00">AbstractCommand</text>
@@ -45,184 +45,184 @@
 <path fill="none" stroke="black" d="M235.461,-797.168C229.759,-793.81 224.364,-789.785 220,-785 139.647,-696.907 111.147,-550.53 102.404,-489.295"/>
 <polygon fill="none" stroke="black" points="105.85,-488.655 101.036,-479.217 98.9132,-489.597 105.85,-488.655"/>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
-<g id="node2" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
-<polygon fill="none" stroke="black" points="319,-290 235,-290 235,-254 319,-254 319,-290"/>
-<text text-anchor="middle" x="277" y="-269.2" font-family="Times New Roman,serif" font-size="11.00">BaseCommand</text>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\CommitCommand -->
+<g id="node2" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\CommitCommand</title>
+<polygon fill="none" stroke="black" points="325,-776 229,-776 229,-740 325,-740 325,-776"/>
+<text text-anchor="middle" x="277" y="-755.2" font-family="Times New Roman,serif" font-size="11.00">CommitCommand</text>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\BaseCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge2" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\BaseCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M234.825,-288.979C229.59,-291.949 224.498,-295.293 220,-299 172.828,-337.875 133.846,-398.816 113.737,-433.819"/>
-<polygon fill="none" stroke="black" points="110.443,-432.535 108.575,-442.964 116.539,-435.976 110.443,-432.535"/>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\HeadsCommand -->
-<g id="node3" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\HeadsCommand</title>
-<polygon fill="none" stroke="black" points="322,-776 232,-776 232,-740 322,-740 322,-776"/>
-<text text-anchor="middle" x="277" y="-755.2" font-family="Times New Roman,serif" font-size="11.00">HeadsCommand</text>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\HeadsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge3" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\HeadsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M231.762,-740.488C227.487,-737.711 223.461,-734.559 220,-731 150.84,-659.88 117.166,-542.405 104.796,-488.99"/>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\CommitCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge2" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\CommitCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M230.929,-739.94C226.964,-737.299 223.236,-734.327 220,-731 150.84,-659.88 117.166,-542.405 104.796,-488.99"/>
 <polygon fill="none" stroke="black" points="108.203,-488.187 102.602,-479.194 101.372,-489.717 108.203,-488.187"/>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\PullCommand -->
-<g id="node4" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\PullCommand</title>
-<polygon fill="none" stroke="black" points="316,-722 238,-722 238,-686 316,-686 316,-722"/>
-<text text-anchor="middle" x="277" y="-701.2" font-family="Times New Roman,serif" font-size="11.00">PullCommand</text>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
+<g id="node3" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
+<polygon fill="none" stroke="black" points="319,-182 235,-182 235,-146 319,-146 319,-182"/>
+<text text-anchor="middle" x="277" y="-161.2" font-family="Times New Roman,serif" font-size="11.00">BaseCommand</text>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\PullCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge4" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\PullCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M237.823,-689.523C231.425,-686.039 225.189,-681.88 220,-677 161.902,-622.362 124.458,-533.457 108.248,-488.66"/>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\BaseCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge3" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\BaseCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M234.868,-179.585C229.444,-182.804 224.289,-186.589 220,-191 150.84,-262.12 117.166,-379.595 104.796,-433.01"/>
+<polygon fill="none" stroke="black" points="101.372,-432.283 102.602,-442.806 108.203,-433.813 101.372,-432.283"/>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand -->
+<g id="node4" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand</title>
+<polygon fill="none" stroke="black" points="328,-452 226,-452 226,-416 328,-416 328,-452"/>
+<text text-anchor="middle" x="277" y="-431.2" font-family="Times New Roman,serif" font-size="11.00">AnnotateCommand</text>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge4" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M225.752,-441.665C204.753,-444.868 180.196,-448.614 158.318,-451.951"/>
+<polygon fill="none" stroke="black" points="157.508,-448.534 148.15,-453.503 158.564,-455.454 157.508,-448.534"/>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\HeadsCommand -->
+<g id="node5" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\HeadsCommand</title>
+<polygon fill="none" stroke="black" points="322,-722 232,-722 232,-686 322,-686 322,-722"/>
+<text text-anchor="middle" x="277" y="-701.2" font-family="Times New Roman,serif" font-size="11.00">HeadsCommand</text>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\HeadsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge5" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\HeadsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M231.793,-685.991C227.563,-683.319 223.538,-680.327 220,-677 161.902,-622.362 124.458,-533.457 108.248,-488.66"/>
 <polygon fill="none" stroke="black" points="111.478,-487.295 104.847,-479.031 104.878,-489.626 111.478,-487.295"/>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\PathsCommand -->
-<g id="node5" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\PathsCommand</title>
-<polygon fill="none" stroke="black" points="320,-668 234,-668 234,-632 320,-632 320,-668"/>
-<text text-anchor="middle" x="277" y="-647.2" font-family="Times New Roman,serif" font-size="11.00">PathsCommand</text>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\PullCommand -->
+<g id="node6" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\PullCommand</title>
+<polygon fill="none" stroke="black" points="316,-668 238,-668 238,-632 316,-632 316,-668"/>
+<text text-anchor="middle" x="277" y="-647.2" font-family="Times New Roman,serif" font-size="11.00">PullCommand</text>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\PathsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge5" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\PathsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M233.954,-632.522C229.026,-629.678 224.248,-626.501 220,-623 172.828,-584.125 133.846,-523.184 113.737,-488.181"/>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\PullCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge6" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\PullCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M237.746,-634.632C231.496,-631.277 225.331,-627.393 220,-623 172.828,-584.125 133.846,-523.184 113.737,-488.181"/>
 <polygon fill="none" stroke="black" points="116.539,-486.024 108.575,-479.036 110.443,-489.465 116.539,-486.024"/>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\SummaryCommand -->
-<g id="node6" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\SummaryCommand</title>
-<polygon fill="none" stroke="black" points="329,-614 225,-614 225,-578 329,-578 329,-614"/>
-<text text-anchor="middle" x="277" y="-593.2" font-family="Times New Roman,serif" font-size="11.00">SummaryCommand</text>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\PathsCommand -->
+<g id="node7" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\PathsCommand</title>
+<polygon fill="none" stroke="black" points="320,-614 234,-614 234,-578 320,-578 320,-614"/>
+<text text-anchor="middle" x="277" y="-593.2" font-family="Times New Roman,serif" font-size="11.00">PathsCommand</text>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\SummaryCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge6" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\SummaryCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\PathsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge7" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\PathsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
 <path fill="none" stroke="black" d="M235.18,-577.987C229.944,-575.197 224.757,-572.178 220,-569 183.45,-544.582 146.483,-509.785 123.198,-486.346"/>
 <polygon fill="none" stroke="black" points="125.643,-483.841 116.137,-479.163 120.651,-488.748 125.643,-483.841"/>
 </g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\SummaryCommand -->
+<g id="node8" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\SummaryCommand</title>
+<polygon fill="none" stroke="black" points="329,-560 225,-560 225,-524 329,-524 329,-560"/>
+<text text-anchor="middle" x="277" y="-539.2" font-family="Times New Roman,serif" font-size="11.00">SummaryCommand</text>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\SummaryCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge8" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\SummaryCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M236.278,-523.822C210.088,-511.837 175.61,-496.059 147.759,-483.313"/>
+<polygon fill="none" stroke="black" points="149.139,-480.096 138.59,-479.117 146.226,-486.461 149.139,-480.096"/>
+</g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\InitCommand -->
-<g id="node7" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\InitCommand</title>
-<polygon fill="none" stroke="black" points="315,-560 239,-560 239,-524 315,-524 315,-560"/>
-<text text-anchor="middle" x="277" y="-539.2" font-family="Times New Roman,serif" font-size="11.00">InitCommand</text>
+<g id="node9" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\InitCommand</title>
+<polygon fill="none" stroke="black" points="315,-506 239,-506 239,-470 315,-470 315,-506"/>
+<text text-anchor="middle" x="277" y="-485.2" font-family="Times New Roman,serif" font-size="11.00">InitCommand</text>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\InitCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge7" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\InitCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M238.895,-525.02C212.483,-512.933 176.725,-496.569 147.973,-483.411"/>
-<polygon fill="none" stroke="black" points="149.064,-480.061 138.514,-479.083 146.151,-486.427 149.064,-480.061"/>
+<g id="edge9" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\InitCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M238.895,-482.34C215.524,-478.775 184.836,-474.094 158.158,-470.024"/>
+<polygon fill="none" stroke="black" points="158.567,-466.546 148.154,-468.498 157.512,-473.466 158.567,-466.546"/>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\BlameCommand -->
+<g id="node10" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\BlameCommand</title>
+<polygon fill="none" stroke="black" points="499,-452 409,-452 409,-416 499,-416 499,-452"/>
+<text text-anchor="middle" x="454" y="-431.2" font-family="Times New Roman,serif" font-size="11.00">BlameCommand</text>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\BlameCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand -->
+<g id="edge10" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\BlameCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand</title>
+<path fill="none" stroke="black" d="M408.84,-434C387.407,-434 361.332,-434 338.117,-434"/>
+<polygon fill="none" stroke="black" points="338.024,-430.5 328.024,-434 338.023,-437.5 338.024,-430.5"/>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\TagsCommand -->
-<g id="node8" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\TagsCommand</title>
-<polygon fill="none" stroke="black" points="495.5,-398 412.5,-398 412.5,-362 495.5,-362 495.5,-398"/>
-<text text-anchor="middle" x="454" y="-377.2" font-family="Times New Roman,serif" font-size="11.00">TagsCommand</text>
+<g id="node11" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\TagsCommand</title>
+<polygon fill="none" stroke="black" points="495.5,-292 412.5,-292 412.5,-256 495.5,-256 495.5,-292"/>
+<text text-anchor="middle" x="454" y="-271.2" font-family="Times New Roman,serif" font-size="11.00">TagsCommand</text>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\TagsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
-<g id="edge8" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\TagsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
-<path fill="none" stroke="black" d="M420.324,-361.918C415.463,-359.03 410.558,-356.002 406,-353 372.596,-330.997 368.176,-319.784 334,-299 331.702,-297.602 329.32,-296.221 326.893,-294.866"/>
-<polygon fill="none" stroke="black" points="328.444,-291.726 317.976,-290.092 325.14,-297.897 328.444,-291.726"/>
+<g id="edge11" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\TagsCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
+<path fill="none" stroke="black" d="M420.277,-255.989C415.422,-253.092 410.531,-250.042 406,-247 372.342,-224.404 368.451,-212.367 334,-191 331.714,-189.582 329.343,-188.185 326.924,-186.817"/>
+<polygon fill="none" stroke="black" points="328.488,-183.684 318.026,-182.01 325.161,-189.843 328.488,-183.684"/>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\AddremoveCommand -->
-<g id="node9" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\AddremoveCommand</title>
-<polygon fill="none" stroke="black" points="333.5,-506 220.5,-506 220.5,-470 333.5,-470 333.5,-506"/>
-<text text-anchor="middle" x="277" y="-485.2" font-family="Times New Roman,serif" font-size="11.00">AddremoveCommand</text>
+<g id="node12" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\AddremoveCommand</title>
+<polygon fill="none" stroke="black" points="333.5,-398 220.5,-398 220.5,-362 333.5,-362 333.5,-398"/>
+<text text-anchor="middle" x="277" y="-377.2" font-family="Times New Roman,serif" font-size="11.00">AddremoveCommand</text>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\AddremoveCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge9" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\AddremoveCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M220.482,-479.531C200.62,-476.501 178.173,-473.077 158.026,-470.004"/>
-<polygon fill="none" stroke="black" points="158.449,-466.528 148.035,-468.48 157.393,-473.448 158.449,-466.528"/>
+<g id="edge12" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\AddremoveCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M236.278,-398.178C210.088,-410.163 175.61,-425.941 147.759,-438.687"/>
+<polygon fill="none" stroke="black" points="146.226,-435.539 138.59,-442.883 149.139,-441.904 146.226,-435.539"/>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\UpdateCommand -->
-<g id="node10" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\UpdateCommand</title>
-<polygon fill="none" stroke="black" points="324,-452 230,-452 230,-416 324,-416 324,-452"/>
-<text text-anchor="middle" x="277" y="-431.2" font-family="Times New Roman,serif" font-size="11.00">UpdateCommand</text>
+<g id="node13" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\UpdateCommand</title>
+<polygon fill="none" stroke="black" points="324,-344 230,-344 230,-308 324,-308 324,-344"/>
+<text text-anchor="middle" x="277" y="-323.2" font-family="Times New Roman,serif" font-size="11.00">UpdateCommand</text>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\UpdateCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge10" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\UpdateCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M229.957,-441.023C208.097,-444.358 181.707,-448.384 158.362,-451.945"/>
-<polygon fill="none" stroke="black" points="157.58,-448.523 148.223,-453.491 158.636,-455.443 157.58,-448.523"/>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\VerifyCommand -->
-<g id="node11" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\VerifyCommand</title>
-<polygon fill="none" stroke="black" points="499,-344 409,-344 409,-308 499,-308 499,-344"/>
-<text text-anchor="middle" x="454" y="-323.2" font-family="Times New Roman,serif" font-size="11.00">VerifyCommand</text>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\VerifyCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
-<g id="edge11" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\VerifyCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
-<path fill="none" stroke="black" d="M408.84,-312.374C384.526,-304.871 354.24,-295.525 328.93,-287.716"/>
-<polygon fill="none" stroke="black" points="329.728,-284.299 319.14,-284.695 327.664,-290.988 329.728,-284.299"/>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\AddCommand -->
-<g id="node12" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\AddCommand</title>
-<polygon fill="none" stroke="black" points="317,-398 237,-398 237,-362 317,-362 317,-398"/>
-<text text-anchor="middle" x="277" y="-377.2" font-family="Times New Roman,serif" font-size="11.00">AddCommand</text>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\AddCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge12" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\AddCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M236.718,-397.977C210.457,-409.994 175.717,-425.892 147.7,-438.714"/>
-<polygon fill="none" stroke="black" points="146.115,-435.59 138.478,-442.934 149.027,-441.955 146.115,-435.59"/>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\RootCommand -->
-<g id="node14" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\RootCommand</title>
-<polygon fill="none" stroke="black" points="495.5,-290 412.5,-290 412.5,-254 495.5,-254 495.5,-290"/>
-<text text-anchor="middle" x="454" y="-269.2" font-family="Times New Roman,serif" font-size="11.00">RootCommand</text>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\RootCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
-<g id="edge13" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\RootCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
-<path fill="none" stroke="black" d="M412.412,-272C387.72,-272 355.954,-272 329.502,-272"/>
-<polygon fill="none" stroke="black" points="329.279,-268.5 319.279,-272 329.279,-275.5 329.279,-268.5"/>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\CloneCommand -->
-<g id="node15" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\CloneCommand</title>
-<polygon fill="none" stroke="black" points="320.5,-344 233.5,-344 233.5,-308 320.5,-308 320.5,-344"/>
-<text text-anchor="middle" x="277" y="-323.2" font-family="Times New Roman,serif" font-size="11.00">CloneCommand</text>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\CloneCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge14" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\CloneCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<g id="edge13" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\UpdateCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
 <path fill="none" stroke="black" d="M235.18,-344.013C229.944,-346.803 224.757,-349.822 220,-353 183.45,-377.418 146.483,-412.215 123.198,-435.654"/>
 <polygon fill="none" stroke="black" points="120.651,-433.252 116.137,-442.837 125.643,-438.159 120.651,-433.252"/>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\VersionCommand -->
-<g id="node16" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\VersionCommand</title>
-<polygon fill="none" stroke="black" points="502,-236 406,-236 406,-200 502,-200 502,-236"/>
-<text text-anchor="middle" x="454" y="-215.2" font-family="Times New Roman,serif" font-size="11.00">VersionCommand</text>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\VerifyCommand -->
+<g id="node14" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\VerifyCommand</title>
+<polygon fill="none" stroke="black" points="499,-238 409,-238 409,-202 499,-202 499,-238"/>
+<text text-anchor="middle" x="454" y="-217.2" font-family="Times New Roman,serif" font-size="11.00">VerifyCommand</text>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\VersionCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
-<g id="edge15" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\VersionCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
-<path fill="none" stroke="black" d="M405.642,-232.613C381.888,-239.943 353.095,-248.828 328.872,-256.303"/>
-<polygon fill="none" stroke="black" points="327.668,-253.011 319.145,-259.304 329.732,-259.7 327.668,-253.011"/>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\VerifyCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
+<g id="edge14" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\VerifyCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
+<path fill="none" stroke="black" d="M408.84,-205.869C384.526,-198.088 354.24,-188.397 328.93,-180.298"/>
+<polygon fill="none" stroke="black" points="329.731,-176.879 319.14,-177.165 327.598,-183.546 329.731,-176.879"/>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand -->
-<g id="node17" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand</title>
-<polygon fill="none" stroke="black" points="328,-236 226,-236 226,-200 328,-200 328,-236"/>
-<text text-anchor="middle" x="277" y="-215.2" font-family="Times New Roman,serif" font-size="11.00">AnnotateCommand</text>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\AddCommand -->
+<g id="node15" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\AddCommand</title>
+<polygon fill="none" stroke="black" points="317,-290 237,-290 237,-254 317,-254 317,-290"/>
+<text text-anchor="middle" x="277" y="-269.2" font-family="Times New Roman,serif" font-size="11.00">AddCommand</text>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge16" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M231.793,-236.009C227.563,-238.681 223.538,-241.673 220,-245 161.902,-299.638 124.458,-388.543 108.248,-433.34"/>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\AddCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge15" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\AddCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M236.867,-287.843C230.92,-291.088 225.081,-294.813 220,-299 172.828,-337.875 133.846,-398.816 113.737,-433.819"/>
+<polygon fill="none" stroke="black" points="110.443,-432.535 108.575,-442.964 116.539,-435.976 110.443,-432.535"/>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\RootCommand -->
+<g id="node17" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\RootCommand</title>
+<polygon fill="none" stroke="black" points="495.5,-184 412.5,-184 412.5,-148 495.5,-148 495.5,-184"/>
+<text text-anchor="middle" x="454" y="-163.2" font-family="Times New Roman,serif" font-size="11.00">RootCommand</text>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\RootCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
+<g id="edge16" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\RootCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
+<path fill="none" stroke="black" d="M412.412,-165.536C387.72,-165.254 355.954,-164.891 329.502,-164.589"/>
+<polygon fill="none" stroke="black" points="329.318,-161.086 319.279,-164.472 329.238,-168.086 329.318,-161.086"/>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\CloneCommand -->
+<g id="node18" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\CloneCommand</title>
+<polygon fill="none" stroke="black" points="320.5,-236 233.5,-236 233.5,-200 320.5,-200 320.5,-236"/>
+<text text-anchor="middle" x="277" y="-215.2" font-family="Times New Roman,serif" font-size="11.00">CloneCommand</text>
+</g>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\CloneCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
+<g id="edge17" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\CloneCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M233.496,-234.958C228.645,-237.889 224.01,-241.229 220,-245 161.902,-299.638 124.458,-388.543 108.248,-433.34"/>
 <polygon fill="none" stroke="black" points="104.878,-432.374 104.847,-442.969 111.478,-434.705 104.878,-432.374"/>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\BlameCommand -->
-<g id="node18" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\BlameCommand</title>
-<polygon fill="none" stroke="black" points="499,-182 409,-182 409,-146 499,-146 499,-182"/>
-<text text-anchor="middle" x="454" y="-161.2" font-family="Times New Roman,serif" font-size="11.00">BlameCommand</text>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\VersionCommand -->
+<g id="node19" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\VersionCommand</title>
+<polygon fill="none" stroke="black" points="502,-130 406,-130 406,-94 502,-94 502,-130"/>
+<text text-anchor="middle" x="454" y="-109.2" font-family="Times New Roman,serif" font-size="11.00">VersionCommand</text>
 </g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\BlameCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand -->
-<g id="edge17" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\BlameCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AnnotateCommand</title>
-<path fill="none" stroke="black" d="M408.84,-177.626C387.311,-184.27 361.098,-192.358 337.805,-199.546"/>
-<polygon fill="none" stroke="black" points="336.547,-196.271 328.024,-202.564 338.611,-202.96 336.547,-196.271"/>
+<!-- \\Siad007\\VersionControl\\HG\\Command\\VersionCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand -->
+<g id="edge18" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\VersionCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\BaseCommand</title>
+<path fill="none" stroke="black" d="M405.642,-126.072C381.888,-133.13 353.095,-141.686 328.872,-148.884"/>
+<polygon fill="none" stroke="black" points="327.733,-145.571 319.145,-151.774 329.727,-152.281 327.733,-145.571"/>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\CatCommand -->
-<g id="node19" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\CatCommand</title>
-<polygon fill="none" stroke="black" points="315.5,-182 238.5,-182 238.5,-146 315.5,-146 315.5,-182"/>
-<text text-anchor="middle" x="277" y="-161.2" font-family="Times New Roman,serif" font-size="11.00">CatCommand</text>
+<g id="node20" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\CatCommand</title>
+<polygon fill="none" stroke="black" points="315.5,-128 238.5,-128 238.5,-92 315.5,-92 315.5,-128"/>
+<text text-anchor="middle" x="277" y="-107.2" font-family="Times New Roman,serif" font-size="11.00">CatCommand</text>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Command\\CatCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge18" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\CatCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M238.323,-177.626C231.653,-181.238 225.192,-185.661 220,-191 150.84,-262.12 117.166,-379.595 104.796,-433.01"/>
-<polygon fill="none" stroke="black" points="101.372,-432.283 102.602,-442.806 108.203,-433.813 101.372,-432.283"/>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\CommitCommand -->
-<g id="node20" class="node"><title>\\Siad007\\VersionControl\\HG\\Command\\CommitCommand</title>
-<polygon fill="none" stroke="black" points="325,-128 229,-128 229,-92 325,-92 325,-128"/>
-<text text-anchor="middle" x="277" y="-107.2" font-family="Times New Roman,serif" font-size="11.00">CommitCommand</text>
-</g>
-<!-- \\Siad007\\VersionControl\\HG\\Command\\CommitCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand -->
-<g id="edge19" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\CommitCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
-<path fill="none" stroke="black" d="M230.432,-128.037C226.615,-130.674 223.055,-133.651 220,-137 139.647,-225.093 111.147,-371.47 102.404,-432.705"/>
+<g id="edge19" class="edge"><title>\\Siad007\\VersionControl\\HG\\Command\\CatCommand&#45;&gt;\\Siad007\\VersionControl\\HG\\Command\\AbstractCommand</title>
+<path fill="none" stroke="black" d="M238.335,-123.208C231.586,-126.87 225.092,-131.418 220,-137 139.647,-225.093 111.147,-371.47 102.404,-432.705"/>
 <polygon fill="none" stroke="black" points="98.9132,-432.403 101.036,-442.783 105.85,-433.345 98.9132,-432.403"/>
 </g>
 <!-- \\Siad007\\VersionControl\\HG\\Factory -->

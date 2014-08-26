@@ -38,7 +38,11 @@ namespace Siad007\VersionControl\HG\Command;
  */
 class CloneCommand extends AbstractCommand
 {
-    /** @var array $arguments */
+    /**
+     * Available arguments for this command.
+     *
+     * @var array $arguments
+     */
     protected $arguments = array(
         'destination' => '',
         'source'      => ''
@@ -47,7 +51,7 @@ class CloneCommand extends AbstractCommand
     /**
      * {@inheritdoc}
      *
-     * @var mixed $options
+     * @var array $options
      */
     protected $options = array(
         '--noupdate'     => false,

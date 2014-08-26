@@ -28,7 +28,11 @@ namespace Siad007\VersionControl\HG\Command;
  */
 class AddCommand extends AbstractCommand
 {
-    /** @var array $arguments */
+    /**
+     * Available arguments for this command.
+     *
+     * @var array $arguments
+     */
     protected $arguments = array(
         'file' => array()
     );
@@ -46,6 +50,8 @@ class AddCommand extends AbstractCommand
     );
 
     /**
+     * Get the file argument.
+     *
      * @return array
      */
     public function getFile()
@@ -54,6 +60,8 @@ class AddCommand extends AbstractCommand
     }
 
     /**
+     * Add a file to the file argument.
+     *
      * @param string $file
      *
      * @return void
