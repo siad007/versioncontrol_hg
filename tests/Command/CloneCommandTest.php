@@ -18,26 +18,29 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
 {
     private $errors;
 
-    protected function setUp() {
+    protected function setUp()
+    {
         $this->errors = array();
         set_error_handler(array($this, "errorHandler"));
     }
 
-    public function errorHandler($errno, $errstr, $errfile, $errline, $errcontext) {
-        $this->errors[] = compact("errno", "errstr", "errfile",
-            "errline", "errcontext");
+    public function errorHandler($errno, $errstr, $errfile, $errline, $errcontext)
+    {
+        $this->errors[] = compact("errno", "errstr", "errfile", "errline", "errcontext");
     }
 
-    public function assertError($errstr, $errno) {
+    public function assertError($errstr, $errno)
+    {
         foreach ($this->errors as $error) {
-            if ($error["errstr"] === $errstr
-                && $error["errno"] === $errno) {
-                    return;
-                }
+            if ($error["errstr"] === $errstr && $error["errno"] === $errno) {
+                return;
+            }
         }
-        $this->fail("Error with level " . $errno .
-            " and message '" . $errstr . "' not found in ",
-            var_export($this->errors, TRUE));
+
+        $this->fail(
+            sprintf("Error with level %s and message '%s' not found in ", $errno, $errstr),
+            var_export($this->errors, true)
+        );
     }
 
     /**
