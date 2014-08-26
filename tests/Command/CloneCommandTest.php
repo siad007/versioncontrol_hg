@@ -37,10 +37,7 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
             }
         }
 
-        $this->fail(
-            sprintf("Error with level %s and message '%s' not found in ", $errno, $errstr),
-            var_export($this->errors, true)
-        );
+        $this->fail(sprintf("Error with level %s and message '%s' not found in ", $errno, $errstr));
     }
 
     /**

@@ -18,7 +18,7 @@ namespace Siad007\VersionControl\HG\Command;
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
  * @method string getSimilarity()
- * @method void addSimilarity(string $similarity)
+ * @method void setSimilarity(string $similarity)
  * @method array getInclude()
  * @method void addInclude(string $pattern)
  * @method array getExclude()
