@@ -17,14 +17,30 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
- * @method string getSimilarity()
- * @method void setSimilarity(string $similarity)
+ * @method boolean getAddremove()
+ * @method void setAddremove(boolean $flag)
+ * @method boolean getCloseBranch()
+ * @method void setCloseBranch(boolean $flag)
+ * @method boolean getAmend()
+ * @method void setAmend(boolean $flag)
+ * @method boolean getSecret()
+ * @method void setSecret(boolean $flag)
+ * @method boolean getEdit()
+ * @method void setEdit(boolean $flag)
  * @method array getInclude()
  * @method void addInclude(string $pattern)
  * @method array getExclude()
  * @method void addExclude(string $pattern)
- * @method boolean getDryRun()
- * @method void setDryRun(boolean $flag)
+ * @method string getMessage()
+ * @method void setMessage(string $text)
+ * @method string getLogfile()
+ * @method void setLogfile(string $file)
+ * @method string getDate()
+ * @method void setDate(string $date)
+ * @method string getUser()
+ * @method void setUser(string $user)
+ * @method boolean getSubrepos()
+ * @method void setSubrepos(boolean $flag)
  */
 class CommitCommand extends AbstractCommand
 {
