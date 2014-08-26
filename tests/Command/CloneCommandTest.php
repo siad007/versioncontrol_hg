@@ -57,15 +57,14 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @expectedException PHPUnit_Framework_Error
      */
     public function cloneCommandWithoutSource()
     {
-        $this->markTestSkipped('this is a misbehavior and should be fixed');
         /* @var $cloneCmd \Siad007\VersionControl\HG\Command\CloneCommand */
         $cloneCmd = Factory::getInstance('clone');
         $cloneCmd->setUncompressed(true);
         $cloneCmd->setInsecure(true);
-
-        $this->assertSame('hg ', $cloneCmd->run(true), print_r($cloneCmd->run(true), true));
+        $cloneCmd->run(true);
     }
 }

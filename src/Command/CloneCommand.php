@@ -103,7 +103,8 @@ class CloneCommand extends AbstractCommand
     public function __toString()
     {
         if ($this->arguments['source'] === '') {
-            return '';
+            trigger_error('No source directory given.', E_USER_ERROR);
+            return;
         }
 
         if ($this->arguments['destination'] === '') {
