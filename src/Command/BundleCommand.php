@@ -19,8 +19,10 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @method string getForce()
  * @method void setForce(boolean $flag)
- * @method string getNewBranch()
- * @method void setNewBranch(boolean $flag)
+ * @method string getAll()
+ * @method void setAll(boolean $flag)
+ * @method string getType()
+ * @method void setType(string $command)
  * @method string getSsh()
  * @method void setSsh(string $command)
  * @method string getRemotecmd()
@@ -29,8 +31,8 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setInsecure(boolean $flag)
  * @method array getRev()
  * @method void addRev(string $revision)
- * @method array getBookmark()
- * @method void addBookmark(string $bookmark)
+ * @method array getBase()
+ * @method void addBase(string $base)
  * @method array getBranch()
  * @method void addBranch(string $branch)
  */
