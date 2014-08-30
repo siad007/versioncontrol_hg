@@ -14,18 +14,19 @@ namespace Siad007\VersionControl\HG\Tests\Command;
 
 use Siad007\VersionControl\HG\Factory;
 
-class SummaryCommandTest extends \PHPUnit_Framework_TestCase
+class ManifestCommandTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
      */
-    public function summaryCommand()
+    public function manifestCommand()
     {
-        $summaryCmd = Factory::createSummary();
-        $summaryCmd->setRemote(true);
+        $manifestCmd = Factory::createManifest();
+        $manifestCmd->setRev('test');
+        $manifestCmd->setAll(true);
 
-        $expected = 'hg summary --remote';
+        $expected = 'hg manifest --rev test --all';
 
-        $this->assertSame($expected, $summaryCmd->run(true));
+        $this->assertSame($expected, $manifestCmd->run(true));
     }
 }
