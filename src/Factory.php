@@ -19,6 +19,7 @@ namespace Siad007\VersionControl\HG;
  * @method \Siad007\VersionControl\HG\Command\AddremoveCommand createAddremove(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\AnnotateCommand createAnnotate(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\BlameCommand createBlame(array $options = array)
+ * @method \Siad007\VersionControl\HG\Command\BlameCommand createBundle(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\CatCommand createCat(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\CloneCommand createClone(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\CommitCommand createCommit(array $options = array)

@@ -19,7 +19,7 @@ class UnbundleCommandTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function addremoveCommand()
+    public function unbundleCommand()
     {
         $unbundleCmd = Factory::createUnbundle();
         $unbundleCmd->addFile('C:\\xampp\\file1\\');
