@@ -79,7 +79,6 @@ class BundleCommand extends AbstractCommand
         $this->arguments['file'] = escapeshellarg($file);
     }
 
-
     /**
      * Get the destination.
      *

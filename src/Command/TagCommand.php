@@ -38,7 +38,7 @@ class TagCommand extends AbstractCommand
 {
     /** @var array $arguments */
     protected $arguments = array(
-        'file' => array()
+        'name' => array()
     );
 
     /**
@@ -60,19 +60,19 @@ class TagCommand extends AbstractCommand
     /**
      * @return array
      */
-    public function getFile()
+    public function getName()
     {
-        return $this->arguments['file'];
+        return $this->arguments['name'];
     }
 
     /**
-     * @param string $file
+     * @param string $name
      *
      * @return void
      */
-    public function addFile($file)
+    public function addName($name)
     {
-        $this->arguments['file'][] = escapeshellarg($file);
+        $this->arguments['name'][] = $name;
     }
 
     /**
@@ -84,7 +84,7 @@ class TagCommand extends AbstractCommand
             "%s%s %s",
             $this->name,
             $this->assembleOptionString(),
-            implode(' ', $this->arguments['file'])
+            implode(' ', $this->arguments['name'])
         );
     }
 }
