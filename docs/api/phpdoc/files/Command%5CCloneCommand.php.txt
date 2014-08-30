@@ -66,6 +66,8 @@ class CloneCommand extends AbstractCommand
     );
 
     /**
+     * Get the destination.
+     *
      * @return string
      */
     public function getDestination()
@@ -74,6 +76,8 @@ class CloneCommand extends AbstractCommand
     }
 
     /**
+     * Set the destination.
+     *
      * @param string $destination
      *
      * @return void
@@ -84,6 +88,8 @@ class CloneCommand extends AbstractCommand
     }
 
     /**
+     * Get the source argument for this command.
+     *
      * @return string
      */
     public function getSource()
@@ -92,6 +98,8 @@ class CloneCommand extends AbstractCommand
     }
 
     /**
+     * Set the source argument for this command.
+     *
      * @param string $source
      *
      * @return void
