@@ -11,4 +11,4 @@ Examples:
     use Siad007\VersionControl\HG\Factory;
 
     $summaryCmd = Factory::createSummary();
-    $summaryCmd->run();
+    $summaryCmd->execute();

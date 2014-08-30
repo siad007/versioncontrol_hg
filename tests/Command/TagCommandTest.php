@@ -37,6 +37,6 @@ class TagCommandTest extends \PHPUnit_Framework_TestCase
         $expected = 'hg tag --force --local --rev test --remove --edit --message text --date date --user user ';
 
         $this->assertSame($name, implode(' ', $tagCmd->getName()));
-        $this->assertSame($expected . $name, $tagCmd->run(true));
+        $this->assertSame($expected . $name, $tagCmd->asString());
     }
 }

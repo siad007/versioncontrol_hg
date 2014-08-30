@@ -26,6 +26,6 @@ class RootCommandTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'hg root';
 
-        $this->assertSame($expected, $rootCmd->run(true));
+        $this->assertSame($expected, $rootCmd->asString());
     }
 }

@@ -38,6 +38,6 @@ class CatCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($file, implode(' ', $catCmd->getFile()));
-        $this->assertSame($expected . $file, $catCmd->run(true));
+        $this->assertSame($expected . $file, $catCmd->asString());
     }
 }

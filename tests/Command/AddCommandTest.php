@@ -36,6 +36,6 @@ class AddCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($file, implode(' ', $addCmd->getFile()));
-        $this->assertSame($expected . $file, $addCmd->run(true));
+        $this->assertSame($expected . $file, $addCmd->asString());
     }
 }

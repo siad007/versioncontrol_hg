@@ -11,4 +11,4 @@ Examples:
     use Siad007\VersionControl\HG\Factory;
 
     $headsCmd = Factory::createHeads();
-    $headsCmd->run();
+    $headsCmd->execute();

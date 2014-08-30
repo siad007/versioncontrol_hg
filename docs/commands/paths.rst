@@ -11,4 +11,4 @@ Examples:
     use Siad007\VersionControl\HG\Factory;
 
     $pathsCmd = Factory::createPaths();
-    $pathsCmd->run();
+    $pathsCmd->execute();

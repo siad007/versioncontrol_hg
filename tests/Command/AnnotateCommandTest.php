@@ -34,6 +34,6 @@ class AnnotateCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($file, implode(' ', $annotateCmd->getFile()));
-        $this->assertSame($expected . $file, $annotateCmd->run(true));
+        $this->assertSame($expected . $file, $annotateCmd->asString());
     }
 }

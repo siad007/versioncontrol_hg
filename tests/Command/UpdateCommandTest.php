@@ -29,6 +29,6 @@ class UpdateCommandTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'hg update --clean --check --date date --rev rev';
 
-        $this->assertSame($expected, $updateCmd->run(true));
+        $this->assertSame($expected, $updateCmd->asString());
     }
 }

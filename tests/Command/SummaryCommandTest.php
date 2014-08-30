@@ -26,6 +26,6 @@ class SummaryCommandTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'hg summary --remote';
 
-        $this->assertSame($expected, $summaryCmd->run(true));
+        $this->assertSame($expected, $summaryCmd->asString());
     }
 }

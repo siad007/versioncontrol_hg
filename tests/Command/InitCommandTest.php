@@ -36,6 +36,6 @@ class InitCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($destination, $initCmd->getDestination());
-        $this->assertSame($expected . $destination, $initCmd->run(true));
+        $this->assertSame($expected . $destination, $initCmd->asString());
     }
 }

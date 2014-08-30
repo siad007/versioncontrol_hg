@@ -11,4 +11,4 @@ Examples:
     use Siad007\VersionControl\HG\Factory;
 
     $addCmd = Factory::createAdd();
-    $addCmd->run();
+    $addCmd->execute();

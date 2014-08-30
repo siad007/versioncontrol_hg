@@ -37,6 +37,6 @@ class PushCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($destination, $pushCmd->getDestination());
-        $this->assertSame($expected . $destination, $pushCmd->run(true));
+        $this->assertSame($expected . $destination, $pushCmd->asString());
     }
 }

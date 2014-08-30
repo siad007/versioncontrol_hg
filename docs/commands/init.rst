@@ -12,4 +12,4 @@ Examples:
 
     $initCmd = Factory::createInit();
     $initCmd->setDestination('/path/to/destination');
-    $initCmd->run();
+    $initCmd->execute();

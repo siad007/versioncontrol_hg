@@ -27,6 +27,6 @@ class ManifestCommandTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'hg manifest --rev test --all';
 
-        $this->assertSame($expected, $manifestCmd->run(true));
+        $this->assertSame($expected, $manifestCmd->asString());
     }
 }

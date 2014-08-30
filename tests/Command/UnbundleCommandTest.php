@@ -34,6 +34,6 @@ class UnbundleCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($file, implode(' ', $unbundleCmd->getFile()));
-        $this->assertSame($expected . $file, $unbundleCmd->run(true));
+        $this->assertSame($expected . $file, $unbundleCmd->asString());
     }
 }

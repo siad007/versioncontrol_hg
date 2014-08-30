@@ -11,4 +11,4 @@ Examples:
     use Siad007\VersionControl\HG\Factory;
 
     $verifyCmd = Factory::createVerify();
-    $verifyCmd->run();
+    $verifyCmd->execute();

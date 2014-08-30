@@ -16,4 +16,4 @@ Examples:
         $archiveCmd->addExclude('excludePattern');
         $archiveCmd->setSubrepos(tru);
         $archiveCmd->setNoDecode(true);
-
+        $archiveCmd->execute();

@@ -11,4 +11,4 @@ Examples:
     use Siad007\VersionControl\HG\Factory;
 
     $addremoveCmd = Factory::createAddremove();
-    $addremoveCmd->run();
+    $addremoveCmd->execute();

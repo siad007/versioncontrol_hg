@@ -45,6 +45,6 @@ class CommitCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($file, implode(' ', $commitCmd->getFile()));
-        $this->assertSame($expected . $file, $commitCmd->run(true));
+        $this->assertSame($expected . $file, $commitCmd->asString());
     }
 }

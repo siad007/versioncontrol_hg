@@ -25,6 +25,6 @@ class VerifyCommandTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'hg verify';
 
-        $this->assertSame($expected, $verifyCmd->run(true));
+        $this->assertSame($expected, $verifyCmd->asString());
     }
 }

@@ -14,4 +14,4 @@ Examples:
         $unbundleCmd->addFile('C:\\xampp\\file1\\');
         $unbundleCmd->addFile('C:\\xampp\\file2\\');
         $unbundleCmd->setUpdate(true);
-        $unbundleCmd->run();
+        $unbundleCmd->execute();

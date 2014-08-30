@@ -57,7 +57,7 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
             $expected = str_replace("'", '"', $expected);
         }
 
-        $this->assertSame($expected, $cloneCmd->run(true));
+        $this->assertSame($expected, $cloneCmd->asString());
     }
 
     /**
@@ -76,7 +76,7 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
             $expected = str_replace("'", '"', $expected);
         }
 
-        $this->assertSame($expected, $cloneCmd->run(true));
+        $this->assertSame($expected, $cloneCmd->asString());
     }
 
     /**
@@ -88,7 +88,7 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
         $cloneCmd = Factory::getInstance('clone');
         $cloneCmd->setUncompressed(true);
         $cloneCmd->setInsecure(true);
-        $cloneCmd->run(true);
+        $cloneCmd->asString();
 
         $this->assertError("No source directory given.", E_USER_ERROR);
     }

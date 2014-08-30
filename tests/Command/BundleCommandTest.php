@@ -36,6 +36,6 @@ class BundleCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($destination, $bundleCmd->getFile());
-        $this->assertSame($expected . $destination, $bundleCmd->run(true));
+        $this->assertSame($expected . $destination, $bundleCmd->asString());
     }
 }

@@ -41,6 +41,6 @@ class PullCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($source, $pullCmd->getSource());
-        $this->assertSame($expected . $source, $pullCmd->run(true));
+        $this->assertSame($expected . $source, $pullCmd->asString());
     }
 }

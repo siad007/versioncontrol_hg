@@ -29,6 +29,6 @@ class HeadsCommandTest extends \PHPUnit_Framework_TestCase
 
         $expected = 'hg heads --rev startrev --topo --closed --template template';
 
-        $this->assertSame($expected, $headsCmd->run(true));
+        $this->assertSame($expected, $headsCmd->asString());
     }
 }

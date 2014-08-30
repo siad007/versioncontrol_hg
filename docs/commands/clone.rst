@@ -12,4 +12,4 @@ Examples:
 
     $cloneCmd = Factory::createClone();
     $cloneCmd->setSource('/path/to/source');
-    $cloneCmd->run();
+    $cloneCmd->execute();

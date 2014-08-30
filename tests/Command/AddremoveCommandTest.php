@@ -37,6 +37,6 @@ class AddremoveCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($file, implode(' ', $addremoveCmd->getFile()));
-        $this->assertSame($expected . $file, $addremoveCmd->run(true));
+        $this->assertSame($expected . $file, $addremoveCmd->asString());
     }
 }

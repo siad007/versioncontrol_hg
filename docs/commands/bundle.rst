@@ -16,5 +16,5 @@ Examples:
         $bundleCmd->setInsecure(true);
         $bundleCmd->setVerbose(true);
         $bundleCmd->setEncoding('UTF-8');
-        $bundleCmd->run();
+        $bundleCmd->execute();
 

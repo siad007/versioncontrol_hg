@@ -36,6 +36,6 @@ class ArchiveCommandTest extends \PHPUnit_Framework_TestCase
         }
 
         $this->assertSame($destination, $archiveCmd->getDestination());
-        $this->assertSame($expected . $destination, $archiveCmd->run(true));
+        $this->assertSame($expected . $destination, $archiveCmd->asString());
     }
 }

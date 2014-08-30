@@ -11,4 +11,4 @@ Examples:
     use Siad007\VersionControl\HG\Factory;
 
     $rootCmd = Factory::createRoot();
-    $rootCmd->run();
+    $rootCmd->execute();
