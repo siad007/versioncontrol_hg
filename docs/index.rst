@@ -40,6 +40,7 @@ Contents:
    commands/push
    commands/root
    commands/summary
+   commands/unbundle
    commands/update
    commands/verify
    commands/version
@@ -87,6 +88,7 @@ Commands
    * :doc:`commands/push`
    * :doc:`commands/root`
    * :doc:`commands/summary`
+   * :doc:`commands/unbundle`
    * :doc:`commands/update`
    * :doc:`commands/verify`
    * :doc:`commands/version`
