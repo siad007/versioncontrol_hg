@@ -11,7 +11,6 @@ Contents:
 
    commands/add
    commands/addremove
-   
    commands/annotate
    commands/archive
    commands/backout
@@ -21,9 +20,7 @@ Contents:
    commands/branches
    commands/bundle
    commands/cat
-   
    commands/clone
-   
    commands/commit
    commands/config
    commands/copy
@@ -32,7 +29,6 @@ Contents:
    commands/forget
    commands/graft
    commands/grep
-   
    commands/heads
    commands/init
    commands/paths
@@ -50,7 +46,6 @@ Commands
 
    * :doc:`commands/add`
    * :doc:`commands/addremove`
-   
    * :doc:`commands/annotate`
    * :doc:`commands/archive`
    * :doc:`commands/backout`
@@ -60,9 +55,7 @@ Commands
    * :doc:`commands/branches`
    * :doc:`commands/bundle`
    * :doc:`commands/cat`
-
    * :doc:`commands/clone`
-
    * :doc:`commands/commit`
    * :doc:`commands/config`
    * :doc:`commands/copy`
@@ -71,18 +64,12 @@ Commands
    * :doc:`commands/forget`
    * :doc:`commands/graft`
    * :doc:`commands/grep`
-
    * :doc:`commands/heads`
-
    * :doc:`commands/help`
    * :doc:`commands/identify`
    * :doc:`commands/import`
    * :doc:`commands/incoming`
-   
    * :doc:`commands/init`
-   
-   
-   
    * :doc:`commands/paths`
    * :doc:`commands/pull`
    * :doc:`commands/push`
