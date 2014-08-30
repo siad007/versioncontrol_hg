@@ -19,7 +19,7 @@ class PushCommandTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function initCommand()
+    public function pushCommand()
     {
         /* @var $pushCmd \Siad007\VersionControl\HG\Command\PushCommand */
         $pushCmd = Factory::getInstance('push');

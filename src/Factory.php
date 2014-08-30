@@ -31,6 +31,7 @@ namespace Siad007\VersionControl\HG;
  * @method \Siad007\VersionControl\HG\Command\RootCommand createRoot(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\SummaryCommand createSummary(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\TagsCommand createTags(array $options = array)
+ * @method \Siad007\VersionControl\HG\Command\UnbundleCommand createUnbundle(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\UpdateCommand createUpdate(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\VerifyCommand createVerify(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\VersionCommand createVersion(array $options = array)
