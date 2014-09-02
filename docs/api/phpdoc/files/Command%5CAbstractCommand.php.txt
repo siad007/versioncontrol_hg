@@ -89,7 +89,10 @@ abstract class AbstractCommand
      *
      * @return string
      */
-    abstract public function __toString();
+    public function __toString()
+    {
+        return sprintf($this->command, $this);
+    }
 
     /**
      * Standard constructor.
@@ -116,25 +119,26 @@ abstract class AbstractCommand
      *
      * @return string
      */
-    public function run($return = false)
+    public function execute()
     {
-        if ($return) {
-            return sprintf($this->command, $this);
-        } else {
-            $output = array();
-            $code = 0;
+        $output = array();
+        $code = 0;
 
-            exec(sprintf($this->command, $this) . " 2>&1", $output, $code);
+        exec(sprintf($this->command, $this) . " 2>&1", $output, $code);
 
-            if ($code != 0) {
-                throw new \RuntimeException(
-                    'An error occurred while using Mercurial; hg returned: '
-                    . implode(PHP_EOL, $output)
-                );
-            } else {
-                echo implode(PHP_EOL, $output);
-            }
+        if ($code != 0) {
+            throw new \RuntimeException(
+                'An error occurred while using VersionControl_HG; hg returned: '
+                . implode(PHP_EOL, $output), $code
+            );
         }
+
+        return implode(PHP_EOL, $output);
+    }
+
+    public function asString()
+    {
+        return self::__toString();
     }
 
     /**
