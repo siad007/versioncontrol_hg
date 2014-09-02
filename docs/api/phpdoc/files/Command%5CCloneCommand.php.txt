@@ -116,6 +116,7 @@ class CloneCommand extends AbstractCommand
     {
         if ($this->arguments['source'] === '') {
             trigger_error('No source directory given.', E_USER_ERROR);
+
             return;
         }
 
