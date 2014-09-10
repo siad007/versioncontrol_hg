@@ -19,7 +19,7 @@ class StatusCommandTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function archiveCommand()
+    public function statusCommand()
     {
         $statusCmd = Factory::createStatus();
         $statusCmd->addFile('C:\\xampp\\file\\');
