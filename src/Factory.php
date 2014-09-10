@@ -30,6 +30,7 @@ namespace Siad007\VersionControl\HG;
  * @method \Siad007\VersionControl\HG\Command\PathsCommand createPaths(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\PullCommand createPull(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\PushCommand createPush(array $options = array)
+ * @method \Siad007\VersionControl\HG\Command\RecoverCommand createRecover(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\RootCommand createRoot(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\StatusCommand createStatus(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\SummaryCommand createSummary(array $options = array)

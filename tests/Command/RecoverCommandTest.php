@@ -21,7 +21,7 @@ class RecoverCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function recoverCommand()
     {
-        $recoverCmd = Factory::createVerify();
+        $recoverCmd = Factory::createRecover();
 
         $expected = 'hg recover';
 
