@@ -86,6 +86,8 @@ class StatusCommand extends AbstractCommand
     );
 
     /**
+     * Get file arguments.
+     *
      * @return array
      */
     public function getFile()
@@ -94,6 +96,8 @@ class StatusCommand extends AbstractCommand
     }
 
     /**
+     * Add file to arguments.
+     *
      * @param string $file
      *
      * @return void
