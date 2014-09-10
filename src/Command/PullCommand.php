@@ -36,7 +36,11 @@ namespace Siad007\VersionControl\HG\Command;
  */
 class PullCommand extends AbstractCommand
 {
-    /** @var array $arguments */
+    /**
+     * Available arguments for this command.
+     *
+     * @var array $arguments
+     */
     protected $arguments = array(
         'source' => ''
     );

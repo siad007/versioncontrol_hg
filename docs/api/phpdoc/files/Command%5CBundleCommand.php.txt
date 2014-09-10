@@ -38,7 +38,11 @@ namespace Siad007\VersionControl\HG\Command;
  */
 class BundleCommand extends AbstractCommand
 {
-    /** @var array $arguments */
+    /**
+     * Available arguments for this command.
+     *
+     * @var array $arguments
+     */
     protected $arguments = array(
         'file'        => '',
         'destination' => '',

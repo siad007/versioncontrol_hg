@@ -28,7 +28,11 @@ namespace Siad007\VersionControl\HG\Command;
  */
 class HeadsCommand extends AbstractCommand
 {
-    /** @var array $arguments */
+    /**
+     * Available arguments for this command.
+     *
+     * @var array $arguments
+     */
     protected $arguments = array();
 
     /**

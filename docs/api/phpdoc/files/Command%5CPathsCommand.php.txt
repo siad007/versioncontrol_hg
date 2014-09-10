@@ -24,7 +24,11 @@ use Siad007\VersionControl\HG\Command;
  */
 class PathsCommand extends AbstractCommand
 {
-    /** @var array $arguments */
+    /**
+     * Available arguments for this command.
+     *
+     * @var array $arguments
+     */
     protected $arguments = array(
         'name' => ''
     );
