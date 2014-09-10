@@ -13,11 +13,13 @@ script:
   - phpunit --coverage-clover build/logs/clover.xml
 
 after_script:
-  - CODECLIMATE_REPO_TOKEN="85b84477ccc3a51e2fc6306ffbe8d248a16ca2fda4337b211b35958b5b5e84fe"
-  - ./vendor/bin/test-reporter
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
 
 notifications:
   email:
     - siad.ardroumli@gmail.com
+
+addons:
+  code_climate:
+    repo_token: 85b84477ccc3a51e2fc6306ffbe8d248a16ca2fda4337b211b35958b5b5e84fe
