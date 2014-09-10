@@ -26,6 +26,7 @@ namespace Siad007\VersionControl\HG;
  * @method \Siad007\VersionControl\HG\Command\CommitCommand createCommit(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\HeadsCommand createHeads(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\InitCommand createInit(array $options = array)
+ * @method \Siad007\VersionControl\HG\Command\LocateCommand createLocate(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\ManifestCommand createManifest(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\PathsCommand createPaths(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\PullCommand createPull(array $options = array)
