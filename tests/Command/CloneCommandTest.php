@@ -29,6 +29,14 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
         $this->errors[] = compact("errno", "errstr", "errfile", "errline", "errcontext");
     }
 
+    /**
+     * Assert Error.
+     *
+     * @param string $errstr
+     * @param int $errno
+     *
+     * @return void
+     */
     public function assertError($errstr, $errno)
     {
         foreach ($this->errors as $error) {

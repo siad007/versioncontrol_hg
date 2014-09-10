@@ -40,7 +40,7 @@ class ArchiveCommand extends AbstractCommand
      * @var array $arguments
      */
     protected $arguments = array(
-        'dest' => array()
+        'dest' => ''
     );
 
     /**
