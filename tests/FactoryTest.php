@@ -41,4 +41,13 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
     {
         Factory::getInstance('test');
     }
+
+    /**
+     * @test
+     * @expectedException \InvalidArgumentException
+     */
+    public function invokeByNonCreate()
+    {
+        Factory::nonExisting('test');
+    }
 }
