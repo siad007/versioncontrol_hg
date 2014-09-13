@@ -17,9 +17,9 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
- * @method string getForce()
+ * @method boolean getForce()
  * @method void setForce(boolean $flag)
- * @method string getAll()
+ * @method boolean getAll()
  * @method void setAll(boolean $flag)
  * @method string getType()
  * @method void setType(string $command)
