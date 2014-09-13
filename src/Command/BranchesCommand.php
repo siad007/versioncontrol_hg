@@ -17,21 +17,19 @@ namespace Siad007\VersionControl\HG\Command;
  *
  * @author Siad Ardroumli <siad.ardroumli@gmail.com>
  *
- * @method boolean getForce()
- * @method void setForce(boolean $flag)
- * @method boolean getClean()
- * @method void setClean(boolean $flag)
+ * @method boolean getActive()
+ * @method void setActive(boolean $flag)
+ * @method boolean getClosed()
+ * @method void setClosed(boolean $flag)
  */
-class BranchCommand extends AbstractCommand
+class BranchesCommand extends AbstractCommand
 {
     /**
      * Available arguments for this command.
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'name'        => ''
-    );
+    protected $arguments = array();
 
     /**
      * {@inheritdoc}
@@ -39,27 +37,9 @@ class BranchCommand extends AbstractCommand
      * @var mixed $options
      */
     protected $options = array(
-        '--force' => false,
-        '--clean' => false
+        '--active' => false,
+        '--closed' => false
     );
-
-    /**
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->arguments['name'];
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return void
-     */
-    public function setName($name)
-    {
-        $this->arguments['name'] = escapeshellarg($name);
-    }
 
     /**
      * {@inheritdoc}
@@ -67,10 +47,9 @@ class BranchCommand extends AbstractCommand
     public function __toString()
     {
         return sprintf(
-            "%s%s %s",
+            "%s%s",
             $this->name,
-            $this->assembleOptionString(),
-            $this->arguments['name']
+            $this->assembleOptionString()
         );
     }
 }
