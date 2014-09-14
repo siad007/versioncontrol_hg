@@ -21,13 +21,13 @@ class RemoveCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function removeCommand()
     {
-        $addremoveCmd = Factory::createRemove();
-        $addremoveCmd->addFile('C:\\xampp\\file1\\');
-        $addremoveCmd->addFile('C:\\xampp\\file2\\');
-        $addremoveCmd->setAfter(true);
-        $addremoveCmd->addInclude('includePattern');
-        $addremoveCmd->addExclude('excludePattern');
-        $addremoveCmd->setForce(true);
+        $removeCmd = Factory::createRemove();
+        $removeCmd->addFile('C:\\xampp\\file1\\');
+        $removeCmd->addFile('C:\\xampp\\file2\\');
+        $removeCmd->setAfter(true);
+        $removeCmd->addInclude('includePattern');
+        $removeCmd->addExclude('excludePattern');
+        $removeCmd->setForce(true);
 
         $file = '\'C:\xampp\file1\\\' \'C:\xampp\file2\\\'';
         $expected = 'hg remove --after --force --include includePattern --exclude excludePattern ';
@@ -36,7 +36,7 @@ class RemoveCommandTest extends \PHPUnit_Framework_TestCase
             $file = str_replace("'", '"', $file);
         }
 
-        $this->assertSame($file, implode(' ', $addremoveCmd->getFile()));
-        $this->assertSame($expected . $file, $addremoveCmd->asString());
+        $this->assertSame($file, implode(' ', $removeCmd->getFile()));
+        $this->assertSame($expected . $file, $removeCmd->asString());
     }
 }
