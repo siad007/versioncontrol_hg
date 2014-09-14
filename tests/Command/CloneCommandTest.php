@@ -9,13 +9,14 @@
  * @license http://www.opensource.org/licenses/mit-license.php MIT
  * @link http://siad007.github.io/versioncontrol_hg
  */
-
 namespace Siad007\VersionControl\HG\Tests\Command;
 
 use Siad007\VersionControl\HG\Factory;
+use Siad007\VersionControl\HG\Tests\Extension\Constraint\HasError;
 
 class CloneCommandTest extends \PHPUnit_Framework_TestCase
 {
+
     private $errors;
 
     protected function setUp()
@@ -35,13 +36,14 @@ class CloneCommandTest extends \PHPUnit_Framework_TestCase
      * @param string $errstr
      * @param int $errno
      *
-     * @return void
+     * @return bool
+     *
      */
     public function assertError($errstr, $errno)
     {
         foreach ($this->errors as $error) {
             if ($error["errstr"] === $errstr && $error["errno"] === $errno) {
-                return;
+                return $this->assertTrue(true);
             }
         }
 
