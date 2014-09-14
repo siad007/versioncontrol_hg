@@ -19,6 +19,7 @@ namespace Siad007\VersionControl\HG;
  * @method \Siad007\VersionControl\HG\Command\AddremoveCommand createAddremove(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\AnnotateCommand createAnnotate(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\ArchiveCommand createArchive(array $options = array)
+ * @method \Siad007\VersionControl\HG\Command\BackoutCommand createBackout(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\BlameCommand createBlame(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\BookmarksCommand createBookmarks(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\BranchCommand createBranch(array $options = array)
