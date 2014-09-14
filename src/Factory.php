@@ -38,6 +38,7 @@ namespace Siad007\VersionControl\HG;
  * @method \Siad007\VersionControl\HG\Command\RemoveCommand createRemove(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\RenameCommand createRename(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\ResolveCommand createResolve(array $options = array)
+ * @method \Siad007\VersionControl\HG\Command\RevertCommand createRevert(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\RootCommand createRoot(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\StatusCommand createStatus(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\SummaryCommand createSummary(array $options = array)
