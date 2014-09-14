@@ -29,6 +29,7 @@ namespace Siad007\VersionControl\HG;
  * @method \Siad007\VersionControl\HG\Command\CloneCommand createClone(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\CommitCommand createCommit(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\CopyCommand createCopy(array $options = array)
+ * @method \Siad007\VersionControl\HG\Command\ForgetCommand createForget(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\HeadsCommand createHeads(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\InitCommand createInit(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\LocateCommand createLocate(array $options = array)
