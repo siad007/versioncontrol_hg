@@ -36,6 +36,7 @@ namespace Siad007\VersionControl\HG;
  * @method \Siad007\VersionControl\HG\Command\ManifestCommand createManifest(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\MergeCommand createMerge(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\PathsCommand createPaths(array $options = array)
+ * @method \Siad007\VersionControl\HG\Command\ParentsCommand createParents(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\PullCommand createPull(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\PushCommand createPush(array $options = array)
  * @method \Siad007\VersionControl\HG\Command\RecoverCommand createRecover(array $options = array)
