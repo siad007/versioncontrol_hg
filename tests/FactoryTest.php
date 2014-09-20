@@ -4,7 +4,7 @@ namespace Siad007\VersionControl\HG\Tests;
 
 use Siad007\VersionControl\HG\Factory;
 
-class FactoryTest extends \PHPUnit_Framework_TestCase
+class FactoryTest extends Helpers\TestCase
 {
     /**
      * @test
@@ -31,6 +31,17 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
                 Factory::getInstance($command)
             );
         }
+    }
+
+    /**
+     * @test
+     */
+    public function privateConstructor()
+    {
+        $refClass  = new \ReflectionClass('\\Siad007\\VersionControl\\HG\\Factory');
+        $refMethod = $refClass->getConstructor();
+
+        $this->assertTrue($refMethod->isPrivate());
     }
 
     /**

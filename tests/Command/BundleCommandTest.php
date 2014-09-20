@@ -23,19 +23,23 @@ class BundleCommandTest extends \PHPUnit_Framework_TestCase
     {
         $bundleCmd = Factory::createBundle();
         $bundleCmd->setFile('C:\\xampp\\file\\');
+        $bundleCmd->setDestination('C:\\xampp\\dest\\');
         $bundleCmd->setSsh('testSSH');
         $bundleCmd->setInsecure(true);
         $bundleCmd->setVerbose(true);
         $bundleCmd->setEncoding('UTF-8');
 
-        $destination = '\'C:\xampp\file\\\'';
+        $destination = '\'C:\xampp\dest\\\'';
+        $file = '\'C:\xampp\file\\\'';
         $expected = 'hg bundle --verbose --encoding UTF-8 --ssh testSSH --insecure ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $destination = str_replace("'", '"', $destination);
+            $file = str_replace("'", '"', $file);
         }
 
-        $this->assertSame($destination, $bundleCmd->getFile());
-        $this->assertSame($expected . $destination, $bundleCmd->asString());
+        $this->assertSame($destination, $bundleCmd->getDestination());
+        $this->assertSame($file, $bundleCmd->getFile());
+        $this->assertSame($expected . $file .  ' ' . $destination, $bundleCmd->asString());
     }
 }

@@ -102,7 +102,7 @@ class BundleCommand extends AbstractCommand
      */
     public function setDestination($destination)
     {
-        $this->arguments['destination'] = ' ' . escapeshellarg($destination);
+        $this->arguments['destination'] = escapeshellarg($destination);
     }
 
     /**
@@ -115,7 +115,7 @@ class BundleCommand extends AbstractCommand
             $this->name,
             $this->assembleOptionString(),
             $this->arguments['file'],
-            $this->arguments['destination']
+            ' ' . $this->arguments['destination']
         );
     }
 }

@@ -24,8 +24,8 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setQuiet(boolean $flag)
  * @method boolean getNoninteractive()
  * @method void setNoninteractive(boolean $flag)
- * @method boolean getVerbose()
- * @method void setVerbose(boolean $flag)
+ * @method boolean getCwd()
+ * @method void setCwd(string $directory)
  * @method boolean getDebug()
  * @method void setDebug(boolean $flag)
  * @method boolean getDebugger()
@@ -142,7 +142,7 @@ abstract class AbstractCommand
      * @param string $name
      * @param array  $arguments
      *
-     * @return boolean|string
+     * @return boolean|array|string
      *
      * @throws \InvalidArgumentException
      */

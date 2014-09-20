@@ -12,62 +12,33 @@
 namespace Siad007\VersionControl\HG\Tests\Command;
 
 use Siad007\VersionControl\HG\Factory;
-use Siad007\VersionControl\HG\Tests\Extension\Constraint\HasError;
+use Siad007\VersionControl\HG\Tests\Helpers\TestCase;
 
-class CloneCommandTest extends \PHPUnit_Framework_TestCase
+class CloneCommandTest extends TestCase
 {
-
-    private $errors;
-
-    protected function setUp()
-    {
-        $this->errors = array();
-        set_error_handler(array($this, "errorHandler"));
-    }
-
-    public function errorHandler($errno, $errstr, $errfile, $errline, $errcontext)
-    {
-        $this->errors[] = compact("errno", "errstr", "errfile", "errline", "errcontext");
-    }
-
-    /**
-     * Assert Error.
-     *
-     * @param string $errstr
-     * @param int $errno
-     *
-     * @return bool
-     *
-     */
-    public function assertError($errstr, $errno)
-    {
-        foreach ($this->errors as $error) {
-            if ($error["errstr"] === $errstr && $error["errno"] === $errno) {
-                return $this->assertTrue(true);
-            }
-        }
-
-        $this->fail(sprintf("Error with level %s and message '%s' not found in ", $errno, $errstr));
-    }
-
     /**
      * @test
      */
     public function cloneCommand()
     {
         $cloneCmd = Factory::createClone();
-        $cloneCmd->setSource('C:\\xampp\\source');
-        $cloneCmd->setDestination('C:\\xampp\\dest');
+        $cloneCmd->setSource('C:\\xampp\\source\\');
+        $cloneCmd->setDestination('C:\\xampp\\dest\\');
         $cloneCmd->setUncompressed(true);
         $cloneCmd->setInsecure(true);
 
-        $expected = 'hg clone --uncompressed --insecure \'C:\xampp\source\' \'C:\xampp\dest\'';
+        $destination = '\'C:\xampp\dest\\\'';
+        $source = '\'C:\xampp\source\\\'';
+        $expected = "hg clone --uncompressed --insecure ";
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-            $expected = str_replace("'", '"', $expected);
+            $destination = str_replace("'", '"', $destination);
+            $source = str_replace("'", '"', $source);
         }
 
-        $this->assertSame($expected, $cloneCmd->asString());
+        $this->assertSame($destination, $cloneCmd->getDestination());
+        $this->assertSame($source, $cloneCmd->getSource());
+        $this->assertSame($expected . $source .  ' ' . $destination, $cloneCmd->asString());
     }
 
     /**

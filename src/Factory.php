@@ -15,49 +15,51 @@ namespace Siad007\VersionControl\HG;
 /**
  * Factory class.
  *
- * @method \Siad007\VersionControl\HG\Command\AddCommand createAdd(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\AddremoveCommand createAddremove(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\AnnotateCommand createAnnotate(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\ArchiveCommand createArchive(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\BackoutCommand createBackout(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\BlameCommand createBlame(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\BookmarksCommand createBookmarks(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\BranchCommand createBranch(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\BranchesCommand createBranches(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\BundleCommand createBundle(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\CatCommand createCat(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\CloneCommand createClone(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\CommitCommand createCommit(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\CopyCommand createCopy(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\ForgetCommand createForget(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\HeadsCommand createHeads(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\InitCommand createInit(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\LocateCommand createLocate(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\ManifestCommand createManifest(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\MergeCommand createMerge(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\PathsCommand createPaths(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\ParentsCommand createParents(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\PullCommand createPull(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\PushCommand createPush(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\RecoverCommand createRecover(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\RemoveCommand createRemove(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\RenameCommand createRename(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\ResolveCommand createResolve(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\RevertCommand createRevert(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\RootCommand createRoot(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\StatusCommand createStatus(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\SummaryCommand createSummary(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\TagCommand createTag(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\TagsCommand createTags(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\UnbundleCommand createUnbundle(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\UpdateCommand createUpdate(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\VerifyCommand createVerify(array $options = array)
- * @method \Siad007\VersionControl\HG\Command\VersionCommand createVersion(array $options = array)
+ * @method static Command\AddCommand createAdd(array $options = array())
+ * @method static Command\AddremoveCommand createAddremove(array $options = array())
+ * @method static Command\AnnotateCommand createAnnotate(array $options = array())
+ * @method static Command\ArchiveCommand createArchive(array $options = array())
+ * @method static Command\BackoutCommand createBackout(array $options = array())
+ * @method static Command\BlameCommand createBlame(array $options = array())
+ * @method static Command\BookmarksCommand createBookmarks(array $options = array())
+ * @method static Command\BranchCommand createBranch(array $options = array())
+ * @method static Command\BranchesCommand createBranches(array $options = array())
+ * @method static Command\BundleCommand createBundle(array $options = array())
+ * @method static Command\CatCommand createCat(array $options = array())
+ * @method static Command\CloneCommand createClone(array $options = array())
+ * @method static Command\CommitCommand createCommit(array $options = array())
+ * @method static Command\CopyCommand createCopy(array $options = array())
+ * @method static Command\ForgetCommand createForget(array $options = array())
+ * @method static Command\HeadsCommand createHeads(array $options = array())
+ * @method static Command\InitCommand createInit(array $options = array())
+ * @method static Command\LocateCommand createLocate(array $options = array())
+ * @method static Command\ManifestCommand createManifest(array $options = array())
+ * @method static Command\MergeCommand createMerge(array $options = array())
+ * @method static Command\PathsCommand createPaths(array $options = array())
+ * @method static Command\ParentsCommand createParents(array $options = array())
+ * @method static Command\PullCommand createPull(array $options = array())
+ * @method static Command\PushCommand createPush(array $options = array())
+ * @method static Command\RecoverCommand createRecover(array $options = array())
+ * @method static Command\RemoveCommand createRemove(array $options = array())
+ * @method static Command\RenameCommand createRename(array $options = array())
+ * @method static Command\ResolveCommand createResolve(array $options = array())
+ * @method static Command\RevertCommand createRevert(array $options = array())
+ * @method static Command\RootCommand createRoot(array $options = array())
+ * @method static Command\StatusCommand createStatus(array $options = array())
+ * @method static Command\SummaryCommand createSummary(array $options = array())
+ * @method static Command\TagCommand createTag(array $options = array())
+ * @method static Command\TagsCommand createTags(array $options = array())
+ * @method static Command\UnbundleCommand createUnbundle(array $options = array())
+ * @method static Command\UpdateCommand createUpdate(array $options = array())
+ * @method static Command\VerifyCommand createVerify(array $options = array())
+ * @method static Command\VersionCommand createVersion(array $options = array())
  */
 class Factory
 {
     /**
      * Disabled constructor.
+     *
+     * @codeCoverageIgnore
      */
     final private function __construct()
     {
@@ -69,7 +71,7 @@ class Factory
      * @param string $command
      * @param array  $options
      *
-     * @return \Siad007\VersionControl\HG\Command\AbstractCommand
+     * @return Command\AbstractCommand
      *
      * @throws \InvalidArgumentException
      */
@@ -95,7 +97,7 @@ class Factory
      * @param string $name
      * @param array  $arguments
      *
-     * @return \Siad007\VersionControl\HG\Command\AbstractCommand
+     * @return Command\AbstractCommand
      *
      * @throws \InvalidArgumentException
      */
@@ -116,6 +118,8 @@ class Factory
 
     /**
      * Disabled clone behavior.
+     *
+     * @codeCoverageIgnore
      */
     final private function __clone()
     {
