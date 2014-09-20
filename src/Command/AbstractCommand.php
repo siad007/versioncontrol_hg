@@ -106,7 +106,7 @@ abstract class AbstractCommand
     {
         $this->name = $this->getCommandName();
 
-        $this->options = array_merge($this->globalOptions, $this->options, $options);
+        $this->options = array_merge($this->options, $options);
     }
 
     /**
@@ -152,9 +152,12 @@ abstract class AbstractCommand
             $match = !empty($matches[4]) ? sprintf('-%s%s', strtolower($matches[4]), $matches[5]) : '';
             $property = strtolower($matches[2]) . $matches[3] . $match;
 
+            $this->options = array_merge($this->globalOptions, $this->options);
+
             if (! isset($this->options["--{$property}"])) {
                 throw new \InvalidArgumentException('Property ' . $property . ' not exists');
             }
+
             switch ($matches[1]) {
                 case 'set':
                     return $this->options["--{$property}"] = $arguments[0];
@@ -162,10 +165,10 @@ abstract class AbstractCommand
                     return $this->options["--{$property}"];
                 case 'add':
                     return $this->options["--{$property}"][] = $arguments[0];
-                case 'default':
-                    throw new \InvalidArgumentException('Method ' . $name . ' not exists');
             }
         }
+
+        throw new \InvalidArgumentException('Method ' . $name . ' not exists');
     }
 
     /**
