@@ -13,6 +13,7 @@
 namespace Siad007\VersionControl\HG\Tests\Command;
 
 use Siad007\VersionControl\HG\Command\AbstractCommand;
+use Siad007\VersionControl\HG\Factory;
 
 class AbstractCommandTest extends \PHPUnit_Framework_TestCase
 {

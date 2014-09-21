@@ -154,21 +154,40 @@ abstract class AbstractCommand
 
             $this->options = array_merge($this->globalOptions, $this->options);
 
-            if (! isset($this->options["--{$property}"])) {
-                throw new \InvalidArgumentException('Property ' . $property . ' not exists');
-            }
+            $this->doesPropertyExist($property);
+
+            $result = false;
 
             switch ($matches[1]) {
                 case 'set':
-                    return $this->options["--{$property}"] = $arguments[0];
+                    $result = $this->options["--{$property}"] = $arguments[0];
+                    break;
                 case 'get':
-                    return $this->options["--{$property}"];
+                    $result = $this->options["--{$property}"];
+                    break;
                 case 'add':
-                    return $this->options["--{$property}"][] = $arguments[0];
+                    $result = $this->options["--{$property}"][] = $arguments[0];
+                    break;
             }
+
+            return $result;
         }
 
         throw new \InvalidArgumentException('Method ' . $name . ' not exists');
+    }
+
+    /**
+     * Does property exist check.
+     *
+     * @param string $property
+     *
+     * @throws \InvalidArgumentException
+     */
+    private function doesPropertyExist($property)
+    {
+        if (! isset($this->options["--{$property}"])) {
+            throw new \InvalidArgumentException('Property ' . $property . ' not exists');
+        }
     }
 
     /**
