@@ -71,4 +71,14 @@ class FactoryTest extends Helpers\TestCase
 
         $this->assertStringStartsWith($expected, Factory::createVersion()->execute());
     }
+
+    /**
+     * @test
+     *
+     * @expectedException \RuntimeException
+     */
+    public function executeCommandWithoutRepositoryInitilized()
+    {
+        Factory::createStatus()->execute();
+    }
 }
