@@ -31,6 +31,7 @@ namespace Siad007\VersionControl\HG;
  * @method static Command\CopyCommand createCopy(array $options = array())
  * @method static Command\ForgetCommand createForget(array $options = array())
  * @method static Command\HeadsCommand createHeads(array $options = array())
+ * @method static Command\IdentifyCommand createIdentify(array $options = array())
  * @method static Command\ImportCommand createImport(array $options = array())
  * @method static Command\InitCommand createInit(array $options = array())
  * @method static Command\LocateCommand createLocate(array $options = array())

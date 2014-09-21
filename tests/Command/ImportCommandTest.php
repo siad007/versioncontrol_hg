@@ -21,20 +21,20 @@ class ImportCommandTest extends \PHPUnit_Framework_TestCase
      */
     public function importCommand()
     {
-        $commitCmd = Factory::createImport();
-        $commitCmd->addPatch('patch1');
-        $commitCmd->addPatch('patch2');
-        $commitCmd->setStrip('num');
-        $commitCmd->setEdit(true);
-        $commitCmd->setNoCommit(true);
-        $commitCmd->setBypass(true);
-        $commitCmd->setExact(true);
-        $commitCmd->setImportBranch(true);
-        $commitCmd->setMessage('text');
-        $commitCmd->setLogfile('logfile');
-        $commitCmd->setDate('date');
-        $commitCmd->setUser('user');
-        $commitCmd->setSimilarity('similarity');
+        $importCmd = Factory::createImport();
+        $importCmd->addPatch('patch1');
+        $importCmd->addPatch('patch2');
+        $importCmd->setStrip('num');
+        $importCmd->setEdit(true);
+        $importCmd->setNoCommit(true);
+        $importCmd->setBypass(true);
+        $importCmd->setExact(true);
+        $importCmd->setImportBranch(true);
+        $importCmd->setMessage('text');
+        $importCmd->setLogfile('logfile');
+        $importCmd->setDate('date');
+        $importCmd->setUser('user');
+        $importCmd->setSimilarity('similarity');
 
         $patch = '\'patch1\' \'patch2\'';
         $expected = 'hg import --strip num --edit --no-commit --bypass --exact --import-branch --message text --logfile logfile --date date --user user --similarity similarity ';
@@ -43,7 +43,7 @@ class ImportCommandTest extends \PHPUnit_Framework_TestCase
             $patch = str_replace("'", '"', $patch);
         }
 
-        $this->assertSame($patch, implode(' ', $commitCmd->getPatch()));
-        $this->assertSame($expected . $patch, $commitCmd->asString());
+        $this->assertSame($patch, implode(' ', $importCmd->getPatch()));
+        $this->assertSame($expected . $patch, $importCmd->asString());
     }
 }
