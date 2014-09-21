@@ -39,6 +39,7 @@ namespace Siad007\VersionControl\HG;
  * @method static Command\MergeCommand createMerge(array $options = array())
  * @method static Command\PathsCommand createPaths(array $options = array())
  * @method static Command\ParentsCommand createParents(array $options = array())
+ * @method static Command\PhaseCommand createPhase(array $options = array())
  * @method static Command\PullCommand createPull(array $options = array())
  * @method static Command\PushCommand createPush(array $options = array())
  * @method static Command\RecoverCommand createRecover(array $options = array())
