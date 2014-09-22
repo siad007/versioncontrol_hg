@@ -62,16 +62,16 @@ abstract class AbstractCommand
      *
      * @var array $options
      */
-    protected $options = array();
+    protected $options = [];
 
     /** @var array $globalOptions */
-    protected $globalOptions = array(
+    protected $globalOptions = [
         '--repository'     => '',
         '--cwd'            => '',
         '--noninteractive' => false,
         '--quiet'          => false,
         '--verbose'        => false,
-        '--config'         => array(),
+        '--config'         => [],
         '--debug'          => false,
         '--debugger'       => false,
         '--encoding'       => '',
@@ -82,7 +82,7 @@ abstract class AbstractCommand
         '--version'        => false,
         '--help'           => false,
         '--hidden'         => false,
-    );
+    ];
 
     /**
      * Returns a string representation for the mercurial shell command.
@@ -102,7 +102,7 @@ abstract class AbstractCommand
      *
      * @param mixed $options
      */
-    public function __construct($options = array())
+    public function __construct($options = [])
     {
         $this->name = $this->getCommandName();
 
@@ -116,7 +116,7 @@ abstract class AbstractCommand
      */
     public function execute()
     {
-        $output = array();
+        $output = [];
         $code = 0;
 
         exec(sprintf($this->command, $this) . " 2>&1", $output, $code);
@@ -131,6 +131,11 @@ abstract class AbstractCommand
         return implode(PHP_EOL, $output);
     }
 
+    /**
+     * Returns the string representation of the command.
+     *
+     * @return string
+     */
     public function asString()
     {
         return self::__toString();

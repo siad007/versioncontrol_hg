@@ -41,25 +41,25 @@ class PushCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'destination' => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--force'      => false,
-        '--rev'        => array(),
-        '--bookmark'   => array(),
-        '--branch'     => array(),
+        '--rev'        => [],
+        '--bookmark'   => [],
+        '--branch'     => [],
         '--new-branch' => false,
         '--ssh'        => '',
         '--remotecmd'  => '',
         '--insecure'   => false
-    );
+    ];
 
     /**
      * Get the destination.

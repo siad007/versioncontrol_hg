@@ -26,16 +26,16 @@ class PathsCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'name' => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array();
+    protected $options = [];
 
     /**
      * @return string

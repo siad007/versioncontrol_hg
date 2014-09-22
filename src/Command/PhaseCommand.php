@@ -35,20 +35,20 @@ class PhaseCommand extends AbstractCommand
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--public' => false,
         '--draft'  => false,
         '--secret' => false,
         '--force'  => false,
-        '--rev'    => array()
-    );
+        '--rev'    => []
+    ];
 
     /**
      * Available arguments for this command.
      *
      * @var array $arguments
      */
-    protected $arguments = array();
+    protected $arguments = [];
 
     /**
      * {@inheritdoc}

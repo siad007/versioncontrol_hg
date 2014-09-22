@@ -27,18 +27,18 @@ class UnbundleCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--update'    => false
-    );
+    ];
 
     /**
      * @return array

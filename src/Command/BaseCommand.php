@@ -22,10 +22,10 @@ class BaseCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array();
+    protected $arguments = [];
 
     /** @var mixed $options */
-    protected $options = array();
+    protected $options = [];
 
     /**
      * {@inheritdoc}

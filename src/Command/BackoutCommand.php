@@ -43,26 +43,26 @@ class BackoutCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'rev' => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--merge'   => false,
         '--rev'     => '',
         '--tool'    => '',
-        '--include' => array(),
-        '--exclude' => array(),
+        '--include' => [],
+        '--exclude' => [],
         '--message' => '',
         '--logfile' => '',
         '--date'    => '',
         '--user'    => ''
-    );
+    ];
 
     /**
      * @return string

@@ -39,24 +39,24 @@ class ArchiveCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'dest' => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--no-decode' => false,
         '--prefix'    => '',
         '--rev'       => '',
         '--type'      => '',
         '--subrepos'  => false,
-        '--include'   => array(),
-        '--exclude'   => array(),
-    );
+        '--include'   => [],
+        '--exclude'   => [],
+    ];
 
     /**
      * Get the destination argument.

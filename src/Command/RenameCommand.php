@@ -35,23 +35,23 @@ class RenameCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'source' => array(),
+    protected $arguments = [
+        'source' => [],
         'dest'   => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--after'   => false,
         '--force'   => false,
-        '--include' => array(),
-        '--exclude' => array(),
+        '--include' => [],
+        '--exclude' => [],
         '--dry-run' => false
-    );
+    ];
 
     /**
      * @return array

@@ -47,16 +47,16 @@ class ImportCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'patch' => array()
-    );
+    protected $arguments = [
+        'patch' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--strip'         => '',
         '--edit'          => false,
         '--no-commit'     => false,
@@ -68,7 +68,7 @@ class ImportCommand extends AbstractCommand
         '--date'          => '',
         '--user'          => '',
         '--similarity'    => ''
-    );
+    ];
 
     /**
      * @return array

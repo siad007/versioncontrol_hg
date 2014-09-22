@@ -29,19 +29,19 @@ class BranchCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'name'        => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--force' => false,
         '--clean' => false
-    );
+    ];
 
     /**
      * @return string

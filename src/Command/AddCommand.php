@@ -33,21 +33,21 @@ class AddCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
-        '--include'  => array(),
-        '--exclude'  => array(),
+    protected $options = [
+        '--include'  => [],
+        '--exclude'  => [],
         '--subrepos' => false,
         '--dry-run'  => false
-    );
+    ];
 
     /**
      * Get the file argument.

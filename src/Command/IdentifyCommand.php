@@ -43,16 +43,16 @@ class IdentifyCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'source'      => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var array $options
      */
-    protected $options = array(
+    protected $options = [
         '--rev'       => '',
         '--num'       => false,
         '--id'        => false,
@@ -62,7 +62,7 @@ class IdentifyCommand extends AbstractCommand
         '--ssh'       => '',
         '--remotecmd' => '',
         '--insecure'  => false
-    );
+    ];
 
     /**
      * Get the source argument for this command.

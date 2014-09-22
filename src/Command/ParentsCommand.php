@@ -29,19 +29,19 @@ class ParentsCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'file' => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--rev'      => '',
         '--template' => ''
-    );
+    ];
 
     /**
      * @return string

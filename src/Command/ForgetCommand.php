@@ -29,19 +29,19 @@ class ForgetCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
-        '--include'    => array(),
-        '--exclude'    => array()
-    );
+    protected $options = [
+        '--include'    => [],
+        '--exclude'    => []
+    ];
 
     /**
      * @return array

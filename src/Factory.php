@@ -15,47 +15,47 @@ namespace Siad007\VersionControl\HG;
 /**
  * Factory class.
  *
- * @method static Command\AddCommand createAdd(array $options = array())
- * @method static Command\AddremoveCommand createAddremove(array $options = array())
- * @method static Command\AnnotateCommand createAnnotate(array $options = array())
- * @method static Command\ArchiveCommand createArchive(array $options = array())
- * @method static Command\BackoutCommand createBackout(array $options = array())
- * @method static Command\BlameCommand createBlame(array $options = array())
- * @method static Command\BookmarksCommand createBookmarks(array $options = array())
- * @method static Command\BranchCommand createBranch(array $options = array())
- * @method static Command\BranchesCommand createBranches(array $options = array())
- * @method static Command\BundleCommand createBundle(array $options = array())
- * @method static Command\CatCommand createCat(array $options = array())
- * @method static Command\CloneCommand createClone(array $options = array())
- * @method static Command\CommitCommand createCommit(array $options = array())
- * @method static Command\CopyCommand createCopy(array $options = array())
- * @method static Command\ForgetCommand createForget(array $options = array())
- * @method static Command\HeadsCommand createHeads(array $options = array())
- * @method static Command\IdentifyCommand createIdentify(array $options = array())
- * @method static Command\ImportCommand createImport(array $options = array())
- * @method static Command\InitCommand createInit(array $options = array())
- * @method static Command\LocateCommand createLocate(array $options = array())
- * @method static Command\ManifestCommand createManifest(array $options = array())
- * @method static Command\MergeCommand createMerge(array $options = array())
- * @method static Command\PathsCommand createPaths(array $options = array())
- * @method static Command\ParentsCommand createParents(array $options = array())
- * @method static Command\PhaseCommand createPhase(array $options = array())
- * @method static Command\PullCommand createPull(array $options = array())
- * @method static Command\PushCommand createPush(array $options = array())
- * @method static Command\RecoverCommand createRecover(array $options = array())
- * @method static Command\RemoveCommand createRemove(array $options = array())
- * @method static Command\RenameCommand createRename(array $options = array())
- * @method static Command\ResolveCommand createResolve(array $options = array())
- * @method static Command\RevertCommand createRevert(array $options = array())
- * @method static Command\RootCommand createRoot(array $options = array())
- * @method static Command\StatusCommand createStatus(array $options = array())
- * @method static Command\SummaryCommand createSummary(array $options = array())
- * @method static Command\TagCommand createTag(array $options = array())
- * @method static Command\TagsCommand createTags(array $options = array())
- * @method static Command\UnbundleCommand createUnbundle(array $options = array())
- * @method static Command\UpdateCommand createUpdate(array $options = array())
- * @method static Command\VerifyCommand createVerify(array $options = array())
- * @method static Command\VersionCommand createVersion(array $options = array())
+ * @method static Command\AddCommand createAdd(array $options = [])
+ * @method static Command\AddremoveCommand createAddremove(array $options = [])
+ * @method static Command\AnnotateCommand createAnnotate(array $options = [])
+ * @method static Command\ArchiveCommand createArchive(array $options = [])
+ * @method static Command\BackoutCommand createBackout(array $options = [])
+ * @method static Command\BlameCommand createBlame(array $options = [])
+ * @method static Command\BookmarksCommand createBookmarks(array $options = [])
+ * @method static Command\BranchCommand createBranch(array $options = [])
+ * @method static Command\BranchesCommand createBranches(array $options = [])
+ * @method static Command\BundleCommand createBundle(array $options = [])
+ * @method static Command\CatCommand createCat(array $options = [])
+ * @method static Command\CloneCommand createClone(array $options = [])
+ * @method static Command\CommitCommand createCommit(array $options = [])
+ * @method static Command\CopyCommand createCopy(array $options = [])
+ * @method static Command\ForgetCommand createForget(array $options = [])
+ * @method static Command\HeadsCommand createHeads(array $options = [])
+ * @method static Command\IdentifyCommand createIdentify(array $options = [])
+ * @method static Command\ImportCommand createImport(array $options = [])
+ * @method static Command\InitCommand createInit(array $options = [])
+ * @method static Command\LocateCommand createLocate(array $options = [])
+ * @method static Command\ManifestCommand createManifest(array $options = [])
+ * @method static Command\MergeCommand createMerge(array $options = [])
+ * @method static Command\PathsCommand createPaths(array $options = [])
+ * @method static Command\ParentsCommand createParents(array $options = [])
+ * @method static Command\PhaseCommand createPhase(array $options = [])
+ * @method static Command\PullCommand createPull(array $options = [])
+ * @method static Command\PushCommand createPush(array $options = [])
+ * @method static Command\RecoverCommand createRecover(array $options = [])
+ * @method static Command\RemoveCommand createRemove(array $options = [])
+ * @method static Command\RenameCommand createRename(array $options = [])
+ * @method static Command\ResolveCommand createResolve(array $options = [])
+ * @method static Command\RevertCommand createRevert(array $options = [])
+ * @method static Command\RootCommand createRoot(array $options = [])
+ * @method static Command\StatusCommand createStatus(array $options = [])
+ * @method static Command\SummaryCommand createSummary(array $options = [])
+ * @method static Command\TagCommand createTag(array $options = [])
+ * @method static Command\TagsCommand createTags(array $options = [])
+ * @method static Command\UnbundleCommand createUnbundle(array $options = [])
+ * @method static Command\UpdateCommand createUpdate(array $options = [])
+ * @method static Command\VerifyCommand createVerify(array $options = [])
+ * @method static Command\VersionCommand createVersion(array $options = [])
  */
 class Factory
 {
@@ -78,7 +78,7 @@ class Factory
      *
      * @throws \InvalidArgumentException
      */
-    public static function getInstance($command, $options = array())
+    public static function getInstance($command, $options = [])
     {
         $commandClassName = sprintf(
             '\\Siad007\\VersionControl\\HG\\Command\\%sCommand',
@@ -114,7 +114,7 @@ class Factory
             $command = strtolower(str_replace('create', '', $name));
         }
 
-        $options = isset($arguments[0]) && is_array($arguments[0]) ? $arguments[0] : array();
+        $options = isset($arguments[0]) && is_array($arguments[0]) ? $arguments[0] : [];
 
         return self::getInstance($command, $options);
     }

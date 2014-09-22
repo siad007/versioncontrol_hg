@@ -41,25 +41,25 @@ class PullCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'source' => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--update'    => false,
         '--force'     => false,
-        '--rev'       => array(),
-        '--bookmark'  => array(),
-        '--branch'    => array(),
+        '--rev'       => [],
+        '--bookmark'  => [],
+        '--branch'    => [],
         '--ssh'       => '',
         '--remotecmd' => '',
         '--insecure'  => false
-    );
+    ];
 
     /**
      * @return string

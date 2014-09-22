@@ -31,20 +31,20 @@ class InitCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'destination' => '.'
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--ssh'       => '',
         '--remotecmd' => '',
         '--insecure'  => false
-    );
+    ];
 
     /**
      * @return string

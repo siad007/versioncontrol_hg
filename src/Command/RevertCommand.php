@@ -39,24 +39,24 @@ class RevertCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'name' => array()
-    );
+    protected $arguments = [
+        'name' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--all'       => false,
         '--date'      => '',
         '--rev'       => '',
         '--no-backup' => false,
-        '--include'   => array(),
-        '--exclude'   => array(),
+        '--include'   => [],
+        '--exclude'   => [],
         '--dry-run'   => false
-    );
+    ];
 
     /**
      * @return array

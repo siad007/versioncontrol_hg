@@ -53,16 +53,16 @@ class AnnotateCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--rev'                 => '',
         '--no-follow'           => false,
         '--text'                => false,
@@ -75,9 +75,9 @@ class AnnotateCommand extends AbstractCommand
         '--ignore-all-space'    => false,
         '--ignore-space-change' => false,
         '--ignore-blank-lines'  => false,
-        '--include'             => array(),
-        '--exclude'             => array(),
-    );
+        '--include'             => [],
+        '--exclude'             => [],
+    ];
 
     /**
      * @return array

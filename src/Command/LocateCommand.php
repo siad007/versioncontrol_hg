@@ -35,22 +35,22 @@ class LocateCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'pattern' => array()
-    );
+    protected $arguments = [
+        'pattern' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--rev'       => '',
         '--print0'    => false,
         '--fullpath'  => false,
-        '--include'   => array(),
-        '--exclude'   => array()
-    );
+        '--include'   => [],
+        '--exclude'   => []
+    ];
 
     /**
      * Get pattern arguments.

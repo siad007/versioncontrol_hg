@@ -57,16 +57,16 @@ class StatusCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--all'       => false,
         '--modified'  => false,
         '--added'     => false,
@@ -78,12 +78,12 @@ class StatusCommand extends AbstractCommand
         '--no-status' => false,
         '--copies'    => false,
         '--print0'    => false,
-        '--rev'       => array(),
+        '--rev'       => [],
         '--change'    => '',
-        '--include'   => array(),
-        '--exclude'   => array(),
+        '--include'   => [],
+        '--exclude'   => [],
         '--subrepos'  => false,
-    );
+    ];
 
     /**
      * Get file arguments.

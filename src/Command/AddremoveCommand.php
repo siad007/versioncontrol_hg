@@ -33,23 +33,25 @@ class AddremoveCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--similarity' => '',
-        '--include'    => array(),
-        '--exclude'    => array(),
+        '--include'    => [],
+        '--exclude'    => [],
         '--dry-run'    => false
-    );
+    ];
 
     /**
+     * Get the file argument.
+     *
      * @return array
      */
     public function getFile()
@@ -58,6 +60,8 @@ class AddremoveCommand extends AbstractCommand
     }
 
     /**
+     * Add a file to the file argument.
+     *
      * @param string $file
      *
      * @return void

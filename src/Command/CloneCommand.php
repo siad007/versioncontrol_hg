@@ -43,27 +43,27 @@ class CloneCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'destination' => '',
         'source'      => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var array $options
      */
-    protected $options = array(
+    protected $options = [
         '--noupdate'     => false,
         '--updaterev'    => '',
-        '--rev'          => array(),
-        '--branch'       => array(),
+        '--rev'          => [],
+        '--branch'       => [],
         '--pull'         => false,
         '--uncompressed' => false,
         '--ssh'       => '',
         '--remotecmd' => '',
         '--insecure'     => false
-    );
+    ];
 
     /**
      * Get the destination.

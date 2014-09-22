@@ -41,25 +41,25 @@ class ResolveCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--all'       => false,
         '--list'      => false,
         '--mark'      => false,
         '--unmark'    => false,
         '--no-status' => false,
         '--tool'      => '',
-        '--include'   => array(),
-        '--exclude'   => array()
-    );
+        '--include'   => [],
+        '--exclude'   => []
+    ];
 
     /**
      * @return array
