@@ -25,7 +25,7 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setText(boolean $flag)
  * @method boolean getUser()
  * @method void setUser(boolean $flag)
- * @method boolean getFile()
+ *  method boolean getFile() // TODO has to be fixed!
  * @method void setFile(boolean $flag)
  * @method boolean getDate()
  * @method void setDate(boolean $flag)

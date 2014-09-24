@@ -20,6 +20,7 @@ namespace Siad007\VersionControl\HG;
  * @method static Command\AnnotateCommand createAnnotate(array $options = [])
  * @method static Command\ArchiveCommand createArchive(array $options = [])
  * @method static Command\BackoutCommand createBackout(array $options = [])
+ * @method static Command\BisecCommand createBisec(array $options = [])
  * @method static Command\BlameCommand createBlame(array $options = [])
  * @method static Command\BookmarksCommand createBookmarks(array $options = [])
  * @method static Command\BranchCommand createBranch(array $options = [])

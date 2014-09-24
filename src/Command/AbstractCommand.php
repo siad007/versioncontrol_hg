@@ -124,7 +124,8 @@ abstract class AbstractCommand
         if ($code != 0) {
             throw new \RuntimeException(
                 'An error occurred while using VersionControl_HG; hg returned: '
-                . implode(PHP_EOL, $output), $code
+                . implode(PHP_EOL, $output),
+                $code
             );
         }
 
@@ -165,13 +166,15 @@ abstract class AbstractCommand
 
             switch ($matches[1]) {
                 case 'set':
-                    $result = $this->options["--{$property}"] = $arguments[0];
+                    $this->options["--{$property}"] = $arguments[0];
+                    $result = $arguments[0];
                     break;
                 case 'get':
                     $result = $this->options["--{$property}"];
                     break;
                 case 'add':
-                    $result = $this->options["--{$property}"][] = $arguments[0];
+                    $this->options["--{$property}"][] = $arguments[0];
+                    $result = $arguments[0];
                     break;
             }
 
