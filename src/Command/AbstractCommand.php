@@ -148,7 +148,7 @@ abstract class AbstractCommand
      * @param string $name
      * @param array  $arguments
      *
-     * @return boolean|array|string
+     * @return boolean|array|string|self
      *
      * @throws \InvalidArgumentException
      */
@@ -167,14 +167,14 @@ abstract class AbstractCommand
             switch ($matches[1]) {
                 case 'set':
                     $this->options["--{$property}"] = $arguments[0];
-                    $result = $arguments[0];
-                    break;
-                case 'get':
-                    $result = $this->options["--{$property}"];
+                    $result = $this;
                     break;
                 case 'add':
                     $this->options["--{$property}"][] = $arguments[0];
-                    $result = $arguments[0];
+                    $result = $this;
+                    break;
+                case 'get':
+                    $result = $this->options["--{$property}"];
                     break;
             }
 

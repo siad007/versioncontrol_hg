@@ -36,6 +36,7 @@ namespace Siad007\VersionControl\HG;
  * @method static Command\ImportCommand createImport(array $options = [])
  * @method static Command\InitCommand createInit(array $options = [])
  * @method static Command\LocateCommand createLocate(array $options = [])
+ * @method static Command\LogCommand createLog(array $options = [])
  * @method static Command\ManifestCommand createManifest(array $options = [])
  * @method static Command\MergeCommand createMerge(array $options = [])
  * @method static Command\PathsCommand createPaths(array $options = [])
