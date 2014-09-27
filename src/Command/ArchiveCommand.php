@@ -73,11 +73,13 @@ class ArchiveCommand extends AbstractCommand
      *
      * @param string $dest
      *
-     * @return void
+     * @return ArchiveCommand
      */
     public function setDestination($dest)
     {
         $this->arguments['dest'] = escapeshellarg($dest);
+
+        return $this;
     }
 
     /**

@@ -29,6 +29,7 @@ namespace Siad007\VersionControl\HG;
  * @method static Command\CatCommand createCat(array $options = [])
  * @method static Command\CloneCommand createClone(array $options = [])
  * @method static Command\CommitCommand createCommit(array $options = [])
+ * @method static Command\ConfigCommand createConfig(array $options = [])
  * @method static Command\CopyCommand createCopy(array $options = [])
  * @method static Command\ForgetCommand createForget(array $options = [])
  * @method static Command\HeadsCommand createHeads(array $options = [])

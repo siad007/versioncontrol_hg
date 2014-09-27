@@ -1,0 +1,88 @@
+<?php
+/**
+ * VersionControl_HG
+ * Simple OO implementation for Mercurial.
+ *
+ * PHP Version 5.4
+ *
+ * @copyright 2014 Siad Ardroumli
+ * @license http://www.opensource.org/licenses/mit-license.php MIT
+ * @link http://siad007.github.io/versioncontrol_hg
+ */
+
+namespace Siad007\VersionControl\HG\Command;
+
+/**
+ * Simple OO implementation for Mercurial.
+ *
+ * @author Siad Ardroumli <siad.ardroumli@gmail.com>
+ *
+ * @method boolean getUntrusted()
+ * @method ConfigCommand setUntrusted(boolean $flag)
+ * @method boolean getEdit()
+ * @method ConfigCommand setEdit(boolean $flag)
+ * @method boolean getLocal()
+ * @method ConfigCommand setLocal(boolean $flag)
+ * @method boolean getGlobal()
+ * @method ConfigCommand setGlobal(boolean $flag)
+ */
+class ConfigCommand extends AbstractCommand
+{
+    /**
+     * Available arguments for this command.
+     *
+     * @var array $arguments
+     */
+    protected $arguments = [
+        'name' => []
+    ];
+
+    /**
+     * Get the name argument.
+     *
+     * @return array
+     */
+    public function getName()
+    {
+        return $this->arguments['name'];
+    }
+
+    /**
+     * Add a name to the argument.
+     *
+     * @param string $name
+     *
+     * @return ConfigCommand
+     */
+    public function addName($name)
+    {
+        $this->arguments['name'][] = escapeshellarg($name);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @var mixed $options
+     */
+    protected $options = [
+        '--untrusted' => false,
+        '--edit'      => false,
+        '--local'     => false,
+        '--global'    => false
+    ];
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __toString()
+    {
+        return sprintf(
+            "%s%s %s",
+            $this->name,
+            $this->assembleOptionString(),
+            implode(' ', $this->arguments['name'])
+        );
+    }
+}
