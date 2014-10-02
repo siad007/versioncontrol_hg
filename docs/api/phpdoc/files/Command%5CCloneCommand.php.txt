@@ -43,27 +43,27 @@ class CloneCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'destination' => '',
         'source'      => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var array $options
      */
-    protected $options = array(
+    protected $options = [
         '--noupdate'     => false,
         '--updaterev'    => '',
-        '--rev'          => array(),
-        '--branch'       => array(),
+        '--rev'          => [],
+        '--branch'       => [],
         '--pull'         => false,
         '--uncompressed' => false,
         '--ssh'       => '',
         '--remotecmd' => '',
         '--insecure'     => false
-    );
+    ];
 
     /**
      * Get the destination.
@@ -117,7 +117,7 @@ class CloneCommand extends AbstractCommand
         if ($this->arguments['source'] === '') {
             trigger_error('No source directory given.', E_USER_ERROR);
 
-            return;
+            return '';
         }
 
         if ($this->arguments['destination'] === '') {

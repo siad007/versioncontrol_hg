@@ -41,16 +41,16 @@ class TagCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'name' => array()
-    );
+    protected $arguments = [
+        'name' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--force'   => false,
         '--local'   => false,
         '--rev'     => '',
@@ -59,7 +59,7 @@ class TagCommand extends AbstractCommand
         '--message' => '',
         '--date'    => '',
         '--user'    => ''
-    );
+    ];
 
     /**
      * @return array

@@ -49,29 +49,29 @@ class CommitCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--addremove'    => false,
         '--close-branch' => false,
         '--amend'        => false,
         '--secret'       => false,
         '--edit'         => false,
-        '--include'      => array(),
-        '--exclude'      => array(),
+        '--include'      => [],
+        '--exclude'      => [],
         '--message'      => '',
         '--logfile'      => '',
         '--date'         => '',
         '--user'         => '',
         '--subrepos'     => false
-    );
+    ];
 
     /**
      * @return array

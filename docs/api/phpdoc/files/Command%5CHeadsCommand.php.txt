@@ -33,19 +33,19 @@ class HeadsCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array();
+    protected $arguments = [];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--rev'      => '',
         '--topo'     => false,
         '--closed'   => false,
         '--template' => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}

@@ -43,27 +43,27 @@ class BundleCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
+    protected $arguments = [
         'file'        => '',
         'destination' => '',
-    );
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--force'      => false,
-        '--rev'        => array(),
-        '--branch'     => array(),
-        '--base'       => array(),
+        '--rev'        => [],
+        '--branch'     => [],
+        '--base'       => [],
         '--all'        => false,
         '--type'       => '',
         '--ssh'        => '',
         '--remotecmd'  => '',
         '--insecure'   => false
-    );
+    ];
 
     /**
      * @return string
@@ -102,7 +102,7 @@ class BundleCommand extends AbstractCommand
      */
     public function setDestination($destination)
     {
-        $this->arguments['destination'] = ' ' . escapeshellarg($destination);
+        $this->arguments['destination'] = escapeshellarg($destination);
     }
 
     /**
@@ -115,7 +115,7 @@ class BundleCommand extends AbstractCommand
             $this->name,
             $this->assembleOptionString(),
             $this->arguments['file'],
-            $this->arguments['destination']
+            ' ' . $this->arguments['destination']
         );
     }
 }

@@ -25,7 +25,7 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setText(boolean $flag)
  * @method boolean getUser()
  * @method void setUser(boolean $flag)
- * @method boolean getFile()
+ *  method boolean getFile() // TODO has to be fixed!
  * @method void setFile(boolean $flag)
  * @method boolean getDate()
  * @method void setDate(boolean $flag)
@@ -53,16 +53,16 @@ class AnnotateCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--rev'                 => '',
         '--no-follow'           => false,
         '--text'                => false,
@@ -75,9 +75,9 @@ class AnnotateCommand extends AbstractCommand
         '--ignore-all-space'    => false,
         '--ignore-space-change' => false,
         '--ignore-blank-lines'  => false,
-        '--include'             => array(),
-        '--exclude'             => array(),
-    );
+        '--include'             => [],
+        '--exclude'             => [],
+    ];
 
     /**
      * @return array

@@ -35,22 +35,22 @@ class BookmarksCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'name'        => array()
-    );
+    protected $arguments = [
+        'name'        => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--force'    => false,
         '--rev'      => '',
         '--delete'   => false,
         '--rename'   => '',
         '--inactive' => false
-    );
+    ];
 
     /**
      * @return array

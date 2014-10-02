@@ -33,19 +33,19 @@ class UpdateCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array();
+    protected $arguments = [];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--clean' => false,
         '--check' => false,
         '--date'  => '',
         '--rev'   => ''
-    );
+    ];
 
     /**
      * {@inheritdoc}

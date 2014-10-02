@@ -35,22 +35,22 @@ class CatCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = array(
-        'file' => array()
-    );
+    protected $arguments = [
+        'file' => []
+    ];
 
     /**
      * {@inheritdoc}
      *
      * @var mixed $options
      */
-    protected $options = array(
+    protected $options = [
         '--output'  => '',
         '--rev'     => '',
         '--decode'  => false,
-        '--include' => array(),
-        '--exclude' => array(),
-    );
+        '--include' => [],
+        '--exclude' => [],
+    ];
 
     /**
      * @return array

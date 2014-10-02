@@ -24,8 +24,8 @@ namespace Siad007\VersionControl\HG\Command;
  * @method void setQuiet(boolean $flag)
  * @method boolean getNoninteractive()
  * @method void setNoninteractive(boolean $flag)
- * @method boolean getVerbose()
- * @method void setVerbose(boolean $flag)
+ * @method boolean getCwd()
+ * @method void setCwd(string $directory)
  * @method boolean getDebug()
  * @method void setDebug(boolean $flag)
  * @method boolean getDebugger()
@@ -54,24 +54,27 @@ abstract class AbstractCommand
     /** @var string $name */
     protected $name = '';
 
+    /** @var string $hgPath */
+    protected $hgPath = 'hg';
+
     /** @var string $command */
-    protected $command = 'hg %s';
+    protected $command = '%s %s';
 
     /**
      * Command specific options.
      *
      * @var array $options
      */
-    protected $options = array();
+    protected $options = [];
 
     /** @var array $globalOptions */
-    protected $globalOptions = array(
+    protected $globalOptions = [
         '--repository'     => '',
         '--cwd'            => '',
         '--noninteractive' => false,
         '--quiet'          => false,
         '--verbose'        => false,
-        '--config'         => array(),
+        '--config'         => [],
         '--debug'          => false,
         '--debugger'       => false,
         '--encoding'       => '',
@@ -82,7 +85,31 @@ abstract class AbstractCommand
         '--version'        => false,
         '--help'           => false,
         '--hidden'         => false,
-    );
+    ];
+
+    /**
+     * Get hg path.
+     *
+     * @return string
+     */
+    public function getHgPath()
+    {
+        return $this->hgPath;
+    }
+
+    /**
+     * Set path to hg executable.
+     *
+     * @param string $path
+     *
+     * @return $this
+     */
+    public function setHgPath($path)
+    {
+        $this->hgPath = $path;
+
+        return $this;
+    }
 
     /**
      * Returns a string representation for the mercurial shell command.
@@ -91,7 +118,7 @@ abstract class AbstractCommand
      */
     public function __toString()
     {
-        return sprintf($this->command, $this);
+        return sprintf($this->command, $this->hgPath, $this);
     }
 
     /**
@@ -102,11 +129,11 @@ abstract class AbstractCommand
      *
      * @param mixed $options
      */
-    public function __construct($options = array())
+    public function __construct($options = [])
     {
         $this->name = $this->getCommandName();
 
-        $this->options = array_merge($this->globalOptions, $this->options, $options);
+        $this->options = array_merge($this->options, $options);
     }
 
     /**
@@ -116,21 +143,27 @@ abstract class AbstractCommand
      */
     public function execute()
     {
-        $output = array();
+        $output = [];
         $code = 0;
 
-        exec(sprintf($this->command, $this) . " 2>&1", $output, $code);
+        exec(sprintf($this->command, $this->hgPath, $this) . " 2>&1", $output, $code);
 
         if ($code != 0) {
             throw new \RuntimeException(
                 'An error occurred while using VersionControl_HG; hg returned: '
-                . implode(PHP_EOL, $output), $code
+                . implode(PHP_EOL, $output),
+                $code
             );
         }
 
         return implode(PHP_EOL, $output);
     }
 
+    /**
+     * Returns the string representation of the command.
+     *
+     * @return string
+     */
     public function asString()
     {
         return self::__toString();
@@ -142,7 +175,7 @@ abstract class AbstractCommand
      * @param string $name
      * @param array  $arguments
      *
-     * @return boolean|string
+     * @return boolean|array|string|self
      *
      * @throws \InvalidArgumentException
      */
@@ -152,19 +185,43 @@ abstract class AbstractCommand
             $match = !empty($matches[4]) ? sprintf('-%s%s', strtolower($matches[4]), $matches[5]) : '';
             $property = strtolower($matches[2]) . $matches[3] . $match;
 
-            if (! isset($this->options["--{$property}"])) {
-                throw new \InvalidArgumentException('Property ' . $property . ' not exists');
-            }
+            $this->options = array_merge($this->globalOptions, $this->options);
+
+            $this->doesPropertyExist($property);
+
+            $result = false;
+
             switch ($matches[1]) {
                 case 'set':
-                    return $this->options["--{$property}"] = $arguments[0];
-                case 'get':
-                    return $this->options["--{$property}"];
+                    $this->options["--{$property}"] = $arguments[0];
+                    $result = $this;
+                    break;
                 case 'add':
-                    return $this->options["--{$property}"][] = $arguments[0];
-                case 'default':
-                    throw new \InvalidArgumentException('Method ' . $name . ' not exists');
+                    $this->options["--{$property}"][] = $arguments[0];
+                    $result = $this;
+                    break;
+                case 'get':
+                    $result = $this->options["--{$property}"];
+                    break;
             }
+
+            return $result;
+        }
+
+        throw new \InvalidArgumentException('Method ' . $name . ' not exists');
+    }
+
+    /**
+     * Does property exist check.
+     *
+     * @param string $property
+     *
+     * @throws \InvalidArgumentException
+     */
+    private function doesPropertyExist($property)
+    {
+        if (! isset($this->options["--{$property}"])) {
+            throw new \InvalidArgumentException('Property ' . $property . ' not exists');
         }
     }
 
