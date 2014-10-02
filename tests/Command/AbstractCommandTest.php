@@ -50,4 +50,15 @@ class AbstractCommandTest extends \PHPUnit_Framework_TestCase
 
         $abstractCommand->testVersion();
     }
+
+    /**
+     * @test
+     */
+    public function hgPath()
+    {
+        $abstractCommand = $this->getMockForAbstractClass('\\Siad007\\VersionControl\\HG\Command\\AbstractCommand');
+        $abstractCommand->setHgPath('/test/path/to/hg');
+
+        $this->assertSame('/test/path/to/hg', $abstractCommand->getHgPath());
+    }
 }

@@ -54,8 +54,11 @@ abstract class AbstractCommand
     /** @var string $name */
     protected $name = '';
 
+    /** @var string $hgPath */
+    protected $hgPath = 'hg';
+
     /** @var string $command */
-    protected $command = 'hg %s';
+    protected $command = '%s %s';
 
     /**
      * Command specific options.
@@ -85,13 +88,37 @@ abstract class AbstractCommand
     ];
 
     /**
+     * Get hg path.
+     *
+     * @return string
+     */
+    public function getHgPath()
+    {
+        return $this->hgPath;
+    }
+
+    /**
+     * Set path to hg executable.
+     *
+     * @param string $path
+     *
+     * @return $this
+     */
+    public function setHgPath($path)
+    {
+        $this->hgPath = $path;
+
+        return $this;
+    }
+
+    /**
      * Returns a string representation for the mercurial shell command.
      *
      * @return string
      */
     public function __toString()
     {
-        return sprintf($this->command, $this);
+        return sprintf($this->command, $this->hgPath, $this);
     }
 
     /**
@@ -119,7 +146,7 @@ abstract class AbstractCommand
         $output = [];
         $code = 0;
 
-        exec(sprintf($this->command, $this) . " 2>&1", $output, $code);
+        exec(sprintf($this->command, $this->hgPath, $this) . " 2>&1", $output, $code);
 
         if ($code != 0) {
             throw new \RuntimeException(
