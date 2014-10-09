@@ -140,6 +140,8 @@ abstract class AbstractCommand
      * Execute mercurial command.
      *
      * @return string
+     *
+     * @throws \RuntimeException
      */
     public function execute()
     {

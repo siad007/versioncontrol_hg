@@ -20,6 +20,11 @@
 		"phpunit/phpunit" : "~4",
 		 "codeclimate/php-test-reporter": "dev-master"
 	},
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        }
+    },
 	"license" : "MIT",
 	"description" : "VersionControl_HG is a library that provides an OO interface to handle Mercurial repositories.",
 	"support" : {
