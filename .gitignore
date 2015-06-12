@@ -2,10 +2,7 @@
 .buildpath
 .project
 .settings
-vendor/*
+vendor/
 composer.phar
 /nbproject/private/
-box.phar
-phpunit.xml
-test.php
 .pydevproject

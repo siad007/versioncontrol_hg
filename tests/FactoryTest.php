@@ -6,6 +6,12 @@ use Siad007\VersionControl\HG\Factory;
 
 class FactoryTest extends Helpers\TestCase
 {
+    protected function setUp()
+    {
+        assumePhpVersion('5.4');
+        parent::setUp();
+    }
+
     /**
      * @test
      */

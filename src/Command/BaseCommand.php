@@ -24,9 +24,6 @@ class BaseCommand extends AbstractCommand
      */
     protected $arguments = [];
 
-    /** @var mixed $options */
-    protected $options = [];
-
     /**
      * {@inheritdoc}
      */
