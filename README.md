@@ -12,7 +12,7 @@ Documentation is available at [Read the Docs](https://versioncontrol-hg.readthed
 ## Installation
 Add a dependency on `siad007/versioncontrol_hg` to your project's composer.json file.
 
-Here is a minimal example of a manually created composer.json file that just defines a dependency on versioncontrol_hg 1.*:
+Here is a minimal example of a manually created composer.json file that just defines a dependency on versioncontrol_hg
 ```
 {
     "require": {
