@@ -240,9 +240,9 @@ abstract class AbstractCommand
             if ($option === true) {
                 $optionString .= " {$name}";
             } elseif (is_string($option) && $option !== '') {
-                $optionString .= " {$name} {$option}";
+                $optionString .= " {$name} " . escapeshellarg($option);
             } elseif (is_array($option) && !empty($option)) {
-                $optionString .= " {$name} " . implode(' ', $option);
+                $optionString .= " {$name} " . implode(' ', escapeshellarg($option));
             }
         }
 
