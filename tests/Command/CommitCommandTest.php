@@ -38,7 +38,7 @@ class CommitCommandTest extends \PHPUnit_Framework_TestCase
         $commitCmd->setSubrepos(true);
 
         $file = '\'C:\xampp\file1\\\' \'C:\xampp\file2\\\'';
-        $expected = 'hg commit --addremove --close-branch --amend --secret --edit --include includePattern --exclude excludePattern --message text --logfile logfile --date date --user user --subrepos ';
+        $expected = 'hg commit --addremove --close-branch --amend --secret --edit --include includePattern --exclude excludePattern --message ' . escapeshellarg('text') . ' --logfile ' . escapeshellarg('logfile') . ' --date ' . escapeshellarg('date') . ' --user ' . escapeshellarg('user') . ' --subrepos ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $file = str_replace("'", '"', $file);

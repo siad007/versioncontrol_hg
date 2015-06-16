@@ -29,7 +29,7 @@ class InitCommandTest extends \PHPUnit_Framework_TestCase
         $initCmd->setEncoding('UTF-8');
 
         $destination = '\'C:\xampp\dest\\\'';
-        $expected = 'hg init --verbose --encoding UTF-8 --ssh testSSH --insecure ';
+        $expected = 'hg init --verbose --encoding ' . escapeshellarg('UTF-8') . ' --ssh ' . escapeshellarg('testSSH') . ' --insecure ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $destination = str_replace("'", '"', $destination);

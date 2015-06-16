@@ -34,7 +34,7 @@ class TagCommandTest extends \PHPUnit_Framework_TestCase
         $tagCmd->setUser('user');
 
         $name = 'rev rev2';
-        $expected = 'hg tag --force --local --rev test --remove --edit --message text --date date --user user ';
+        $expected = 'hg tag --force --local --rev ' . escapeshellarg('test') . ' --remove --edit --message ' . escapeshellarg('text') . ' --date ' . escapeshellarg('date') . ' --user ' . escapeshellarg('user') . ' ';
 
         $this->assertSame($name, implode(' ', $tagCmd->getName()));
         $this->assertSame($expected . $name, $tagCmd->asString());

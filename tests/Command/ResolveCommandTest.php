@@ -34,7 +34,7 @@ class ResolveCommandTest extends \PHPUnit_Framework_TestCase
         $resolveCmd->setNoStatus(true);
 
         $file = '\'C:\xampp\file1\\\' \'C:\xampp\file2\\\'';
-        $expected = 'hg resolve --all --list --mark --unmark --no-status --tool testtool --include includePattern --exclude excludePattern ';
+        $expected = 'hg resolve --all --list --mark --unmark --no-status --tool ' . escapeshellarg('testtool') . ' --include includePattern --exclude excludePattern ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $file = str_replace("'", '"', $file);

@@ -27,7 +27,7 @@ class HeadsCommandTest extends \PHPUnit_Framework_TestCase
         $headsCmd->setRev('startrev');
         $headsCmd->setTopo(true);
 
-        $expected = 'hg heads --rev startrev --topo --closed --template template';
+        $expected = 'hg heads --rev ' . escapeshellarg('startrev') . ' --topo --closed --template ' . escapeshellarg('template');
 
         $this->assertSame($expected, $headsCmd->asString());
     }

@@ -33,7 +33,7 @@ class RevertCommandTest extends \PHPUnit_Framework_TestCase
         $revertCmd->setDryRun(true);
 
         $name = '\'name1\' \'name2\'';
-        $expected = 'hg revert --all --date date --rev revision --no-backup --include includePattern --exclude excludePattern --dry-run ';
+        $expected = 'hg revert --all --date ' . escapeshellarg('date') . ' --rev ' . escapeshellarg('revision') . ' --no-backup --include includePattern --exclude excludePattern --dry-run ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $name = str_replace("'", '"', $name);

@@ -33,7 +33,7 @@ class BackoutCommandTest extends \PHPUnit_Framework_TestCase
         $backoutCmd->setUser('user');
 
         $revision = '\'revision\'';
-        $expected = 'hg backout --merge --tool tool --include includePattern --exclude excludePattern --message text --logfile logfile --date date --user user ';
+        $expected = 'hg backout --merge --tool ' . escapeshellarg('tool') . ' --include includePattern --exclude excludePattern --message ' . escapeshellarg('text') . ' --logfile ' . escapeshellarg('logfile') . ' --date ' . escapeshellarg('date') . ' --user ' . escapeshellarg('user') . ' ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $revision = str_replace("'", '"', $revision);

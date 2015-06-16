@@ -26,7 +26,7 @@ class MergeCommandTest extends \PHPUnit_Framework_TestCase
         $mergeCmd->setTool('testtool');
         $mergeCmd->setPreview(true);
 
-        $expected = 'hg merge --rev revision --preview --tool testtool';
+        $expected = 'hg merge --rev ' . escapeshellarg('revision') . ' --preview --tool ' . escapeshellarg('testtool');
 
         $this->assertSame($expected, $mergeCmd->asString());
     }

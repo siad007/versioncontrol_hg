@@ -34,7 +34,7 @@ class PullCommandTest extends \PHPUnit_Framework_TestCase
         $pullCmd->setEncoding('UTF-8');
 
         $source = '\'C:\xampp\source\\\'';
-        $expected = 'hg pull --verbose --encoding UTF-8 --rev rev1 rev2 --bookmark bookmark --branch branch --ssh testSSH --insecure ';
+        $expected = 'hg pull --verbose --encoding ' . escapeshellarg('UTF-8') . ' --rev rev1 rev2 --bookmark bookmark --branch branch --ssh ' . escapeshellarg('testSSH') . ' --insecure ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $source = str_replace("'", '"', $source);

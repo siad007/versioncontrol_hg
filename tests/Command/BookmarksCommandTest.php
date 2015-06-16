@@ -29,7 +29,7 @@ class BookmarksCommandTest extends \PHPUnit_Framework_TestCase
         $bookmarksCmd->setRename('name');
 
         $name = '\'test1\' \'test2\'';
-        $expected = 'hg bookmarks --force --rev revision --rename name ';
+        $expected = 'hg bookmarks --force --rev ' . escapeshellarg('revision') . ' --rename ' . escapeshellarg('name') . ' ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $name = str_replace("'", '"', $name);

@@ -31,7 +31,7 @@ class BundleCommandTest extends \PHPUnit_Framework_TestCase
 
         $destination = '\'C:\xampp\dest\\\'';
         $file = '\'C:\xampp\file\\\'';
-        $expected = 'hg bundle --verbose --encoding UTF-8 --ssh testSSH --insecure ';
+        $expected = 'hg bundle --verbose --encoding ' . escapeshellarg('UTF-8') . ' --ssh ' . escapeshellarg('testSSH') . ' --insecure ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $destination = str_replace("'", '"', $destination);

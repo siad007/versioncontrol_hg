@@ -27,7 +27,7 @@ class PhaseCommandTest extends \PHPUnit_Framework_TestCase
         $phaseCmd->setVerbose(true);
         $phaseCmd->setEncoding('UTF-8');
 
-        $expected = 'hg phase --verbose --encoding UTF-8 --public --force';
+        $expected = 'hg phase --verbose --encoding ' . escapeshellarg('UTF-8') . ' --public --force';
 
         $this->assertSame($expected, $phaseCmd->asString());
     }

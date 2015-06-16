@@ -27,7 +27,7 @@ class ParentsCommandTest extends \PHPUnit_Framework_TestCase
         $parentsCmd->setTemplate('template');
 
         $file = '\'C:\xampp\file\\\'';
-        $expected = 'hg parents --rev revision --template template ';
+        $expected = 'hg parents --rev ' . escapeshellarg('revision') . ' --template ' . escapeshellarg('template') . ' ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $file = str_replace("'", '"', $file);

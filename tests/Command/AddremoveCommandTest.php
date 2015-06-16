@@ -30,7 +30,7 @@ class AddremoveCommandTest extends \PHPUnit_Framework_TestCase
         $addremoveCmd->setDryRun(true);
 
         $file = '\'C:\xampp\file1\\\' \'C:\xampp\file2\\\'';
-        $expected = 'hg addremove --similarity 50 --include includePattern --exclude excludePattern --dry-run ';
+        $expected = 'hg addremove --similarity ' . escapeshellarg('50') . ' --include includePattern --exclude excludePattern --dry-run ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $file = str_replace("'", '"', $file);

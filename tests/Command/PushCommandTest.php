@@ -30,7 +30,7 @@ class PushCommandTest extends \PHPUnit_Framework_TestCase
         $pushCmd->setEncoding('UTF-8');
 
         $destination = '\'C:\xampp\dest\\\'';
-        $expected = 'hg push --verbose --encoding UTF-8 --ssh testSSH --insecure ';
+        $expected = 'hg push --verbose --encoding ' . escapeshellarg('UTF-8') . ' --ssh ' . escapeshellarg('testSSH') . ' --insecure ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $destination = str_replace("'", '"', $destination);

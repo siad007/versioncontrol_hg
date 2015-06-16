@@ -242,7 +242,7 @@ abstract class AbstractCommand
             } elseif (is_string($option) && $option !== '') {
                 $optionString .= " {$name} " . escapeshellarg($option);
             } elseif (is_array($option) && !empty($option)) {
-                $optionString .= " {$name} " . implode(' ', escapeshellarg($option));
+                $optionString .= " {$name} " . implode(' ', $option);
             }
         }
 

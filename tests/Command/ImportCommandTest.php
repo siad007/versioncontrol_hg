@@ -37,7 +37,7 @@ class ImportCommandTest extends \PHPUnit_Framework_TestCase
         $importCmd->setSimilarity('similarity');
 
         $patch = '\'patch1\' \'patch2\'';
-        $expected = 'hg import --strip num --edit --no-commit --bypass --exact --import-branch --message text --logfile logfile --date date --user user --similarity similarity ';
+        $expected = 'hg import --strip ' . escapeshellarg('num') . ' --edit --no-commit --bypass --exact --import-branch --message ' . escapeshellarg('text') . ' --logfile ' . escapeshellarg('logfile') . ' --date ' . escapeshellarg('date') . ' --user ' . escapeshellarg('user') . ' --similarity ' . escapeshellarg('similarity') . ' ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $patch = str_replace("'", '"', $patch);

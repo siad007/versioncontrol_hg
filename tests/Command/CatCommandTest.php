@@ -31,7 +31,7 @@ class CatCommandTest extends \PHPUnit_Framework_TestCase
         $catCmd->setDecode(true);
 
         $file = '\'C:\xampp\file1\\\' \'C:\xampp\file2\\\'';
-        $expected = 'hg cat --output output --rev revision --decode --include includePattern --exclude excludePattern ';
+        $expected = 'hg cat --output ' . escapeshellarg('output') . ' --rev ' . escapeshellarg('revision') . ' --decode --include includePattern --exclude excludePattern ';
 
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $file = str_replace("'", '"', $file);
