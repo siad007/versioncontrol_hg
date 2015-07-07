@@ -18,11 +18,13 @@ matrix:
     - php: nightly
   fast_finish: true
 
-install:
+before_install:
  - travis_retry composer self-update && composer --version
  - export PATH="$HOME/.composer/vendor/bin:$PATH"
  - travis_retry composer config -g github-oauth.github.com $GITHUB_TOKEN
- - travis_retry composer update -n
+
+install:
+ - travis_retry composer install --no-interaction
  - mkdir -p build/logs
  - sudo apt-get install python-setuptools python-dev build-essential
  - sudo easy_install -U mercurial
