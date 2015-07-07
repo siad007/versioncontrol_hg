@@ -20,8 +20,6 @@ matrix:
 
 install:
  - travis_retry composer self-update && composer --version
-
-before_script:
  - travis_retry composer config -g github-oauth.github.com $GITHUB_TOKEN
  - travis_retry composer install -n --prefer-dist
  - mkdir -p build/logs
