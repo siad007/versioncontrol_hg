@@ -19,8 +19,8 @@ matrix:
   fast_finish: true
 
 before_script:
- - composer selfupdate --quiet
- - composer install -n --dev --prefer-dist
+ - travis_retry composer self-update && composer --version
+ - travis_retry composer install -n --dev --prefer-dist
  - mkdir -p build/logs
  - sudo apt-get install python-setuptools python-dev build-essential
  - sudo easy_install -U mercurial
