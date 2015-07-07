@@ -19,8 +19,8 @@ matrix:
   fast_finish: true
 
 before_script:
- - composer config --global github-oauth.github.com $GithubToken
  - travis_retry composer self-update && composer --version
+ - travis_retry composer config --global github-oauth.github.com $GithubToken
  - travis_retry composer install -n --prefer-dist
  - mkdir -p build/logs
  - sudo apt-get install python-setuptools python-dev build-essential
