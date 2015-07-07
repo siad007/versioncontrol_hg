@@ -20,7 +20,7 @@ matrix:
 
 install:
  - travis_retry composer self-update && composer --version
- - travis_retry composer config --global github-oauth.github.com $GITHUB_TOKEN
+ - sudo composer config --global github-oauth.github.com $GITHUB_TOKEN
  - travis_retry composer install -n --prefer-dist
  - mkdir -p build/logs
  - sudo apt-get install python-setuptools python-dev build-essential
