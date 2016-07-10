@@ -27,7 +27,7 @@ class UpdateCommandTest extends \PHPUnit_Framework_TestCase
         $updateCmd->setDate('date');
         $updateCmd->setRev('rev');
 
-        $expected = 'hg update --clean --check --date ' . escapeshellarg('date') . ' --rev ' . escapeshellarg('rev');
+        $expected = 'hg update --clean --check --date ' . escapeshellarg('date') . ' --rev ' . escapeshellarg('rev') . ' ';
 
         $this->assertSame($expected, $updateCmd->asString());
     }
@@ -44,7 +44,7 @@ class UpdateCommandTest extends \PHPUnit_Framework_TestCase
         $updateCmd->setRev('rev');
         $updateCmd->setBranch('dev');
 
-        $expected = 'hg update --clean --check --date ' . escapeshellarg('date') . ' --rev ' . escapeshellarg('rev') . ' \'dev\'';
+        $expected = 'hg update --clean --check --date ' . escapeshellarg('date') . ' --rev ' . escapeshellarg('rev') . ' ' . escapeshellarg('dev');
 
         $this->assertSame($expected, $updateCmd->asString());
     }
