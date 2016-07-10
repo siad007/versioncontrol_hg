@@ -26,8 +26,7 @@ before_install:
 install:
  - travis_retry composer install --no-interaction
  - mkdir -p build/logs
- - sudo apt-get install python-setuptools python-dev build-essential
- - sudo easy_install -U mercurial
+ - sudo apt-get install mercurial
 
 script:
   - phpunit --coverage-clover build/logs/clover.xml
