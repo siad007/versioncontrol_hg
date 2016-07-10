@@ -33,7 +33,9 @@ class UpdateCommand extends AbstractCommand
      *
      * @var array $arguments
      */
-    protected $arguments = [];
+    protected $arguments = [
+        'branch' => ''
+    ];
 
     /**
      * {@inheritdoc}
@@ -47,15 +49,31 @@ class UpdateCommand extends AbstractCommand
         '--rev'   => ''
     ];
 
+    public function getBranch()
+    {
+        return $this->arguments['branch'];
+    }
+
+    /**
+     * @param string $branch
+     *
+     * @return void
+     */
+    public function setBranch($branch)
+    {
+        $this->arguments['branch'] = escapeshellarg($branch);
+    }
+
     /**
      * {@inheritdoc}
      */
     public function __toString()
     {
         return sprintf(
-            "%s%s",
+            "%s%s %s",
             $this->name,
-            $this->assembleOptionString()
+            $this->assembleOptionString(),
+            $this->arguments['branch']
         );
     }
 }

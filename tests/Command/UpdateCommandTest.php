@@ -31,4 +31,21 @@ class UpdateCommandTest extends \PHPUnit_Framework_TestCase
 
         $this->assertSame($expected, $updateCmd->asString());
     }
+
+    /**
+     * @test
+     */
+    public function updateCommandWithBranch()
+    {
+        $updateCmd = Factory::createUpdate();
+        $updateCmd->setClean(true);
+        $updateCmd->setCheck(true);
+        $updateCmd->setDate('date');
+        $updateCmd->setRev('rev');
+        $updateCmd->setBranch('dev');
+
+        $expected = 'hg update --clean --check --date ' . escapeshellarg('date') . ' --rev ' . escapeshellarg('rev') . ' \'dev\'';
+
+        $this->assertSame($expected, $updateCmd->asString());
+    }
 }
