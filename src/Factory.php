@@ -127,7 +127,7 @@ class Factory
      *
      * @codeCoverageIgnore
      */
-    final private function __clone()
+    private function __clone()
     {
     }
 }
